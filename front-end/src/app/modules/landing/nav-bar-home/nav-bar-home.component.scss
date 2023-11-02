@@ -99,7 +99,7 @@ nav .icon-burger {
 nav .icon-burger .line {
 	width: 30px;
 	height: 2px;
-	background-color: #696060;
+	background-color: #fff;
 	margin: 5px;
 	border-radius: 3px;
 	transition: all .3s ease-in-out;
@@ -311,7 +311,6 @@ nav .icon-burger .line {
   }
 
   /* Section - Parallax */
-  /**************************/
   #parallax-world-of-ugg .parallax-one {
     height: 743px;
     padding-top: 200px;
@@ -319,7 +318,6 @@ nav .icon-burger .line {
     overflow: hidden;
     position: relative;
     width: 100%;
-    /* background-image: url(../../assets/images/mahendi/mahendi0.jpeg); */
    background-image: url(../../../../assets/images/wall/empty-marry.JPG);
     background-attachment: fixed;
     background-size: cover;
@@ -335,7 +333,7 @@ nav .icon-burger .line {
     overflow: hidden;
     position: relative;
     width: 100%;
-    /* background-image: url(../../assets/images/mahendi/mahendi-jani.jpeg); */
+
     background-image: url(../../../../assets/images/wall/light-kiss.JPG);
     background-attachment: fixed;
     background-size: cover;
@@ -351,8 +349,7 @@ nav .icon-burger .line {
     overflow: hidden;
     position: relative;
     width: 100%;
-    /* background-image: url(../../assets/images/puberty/puberty14.jpeg); */
-    background-image: url(../../../../assets/images/wall/happiclient.JPG);
+    background-image: url(../../../../assets/images/wall/welcome-board.webp);
     background-attachment: fixed;
     background-size: cover;
     -moz-background-size: cover;
@@ -368,7 +365,6 @@ nav .icon-burger .line {
    overflow: hidden;
    position: relative;
    width: 100%;
-   /* background-image: url(../../assets/images/puberty/puberty14.jpeg); */
    background-image: url(../../../../assets/images/wall/hand.JPG);
    background-attachment: fixed;
    background-size: cover;
@@ -385,7 +381,6 @@ nav .icon-burger .line {
    overflow: hidden;
    position: relative;
    width: 100%;
-   /* background-image: url(../../assets/images/puberty/puberty14.jpeg); */
    background-image: url(../../../../assets/images/wall/lets-talk.jpeg);
    background-attachment: fixed;
    background-size: cover;
@@ -439,6 +434,7 @@ nav .icon-burger .line {
   .text-heading-center{
     text-align: center;
     font-family: "proxima-nova";
+    font-size: 18px;
   }
   p{
     // text-align: center;
@@ -461,4 +457,8 @@ nav .icon-burger .line {
 
  .bg-white{
     background-color: #fff;
+ }
+
+ .app-color-text{
+    color: #659764!important;
  }
