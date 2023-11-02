@@ -33,7 +33,18 @@ nav {
 	font-family: 'Montserrat', sans-serif;
 	padding: 0 5%;
 	height: 100px;
-	background-color: transparent;
+	background-color: rgba(22,22,22,0.55);
+}
+.scrolled{
+    position: fixed;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	top: 0;
+	font-family: 'Montserrat', sans-serif;
+	padding: 0 5%;
+	height: 100px;
+	background-color: #659764;
 }
 nav .logo {
 	// float: left;
@@ -69,7 +80,7 @@ nav .links li {
 
 	display: block;
 	padding: 1em;
-	color: #000;
+	color: #fff;
 	text-decoration: none;
     cursor: pointer;
 }
@@ -375,7 +386,7 @@ nav .icon-burger .line {
    position: relative;
    width: 100%;
    /* background-image: url(../../assets/images/puberty/puberty14.jpeg); */
-   background-image: url(../../../../assets/images/wall/table-deco.jpeg);
+   background-image: url(../../../../assets/images/wall/lets-talk.jpeg);
    background-attachment: fixed;
    background-size: cover;
    -moz-background-size: cover;
@@ -430,7 +441,7 @@ nav .icon-burger .line {
     font-family: "proxima-nova";
   }
   p{
-    text-align: center;
+    // text-align: center;
   }
   .pt-100{
    /* padding-top: 100px; */
@@ -446,4 +457,8 @@ nav .icon-burger .line {
  }
  .link-insta:hover{
    text-decoration: none;
+ }
+
+ .bg-white{
+    background-color: #fff;
  }

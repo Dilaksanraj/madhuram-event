@@ -1,8 +1,8 @@
 
-<div class="flex flex-col flex-auto min-w-0">
+<div (scroll)="onScroll($event)" class="flex flex-col flex-auto min-w-0">
 
     <!-- Header -->
-    <nav [class.header_change]  = "header_variable">
+    <nav class="header_change" id="subTitle">
         <input id="nav-toggle" type="checkbox">
         <div class="logo">
             <h2>
@@ -147,7 +147,7 @@
 
                   <section>
                     <div class="parallax-five">
-                      <h2>Table Decoration</h2>
+                      <h2>Late's Talk</h2>
                     </div>
                   </section>
 
@@ -162,14 +162,6 @@
                         worked on, giving you a taste of what we can create for your special
                         day.
                       </p>
-
-
-                    </div>
-                    <div style="text-align: center; margin-bottom: 100px;">
-                      <!-- <a href="https://www.instagram.com/madhuram_event" target="_blank" class="link-insta">
-                        <img width="50" src="../../assets/icons/flat-icons/instagram.png">
-                        Our instragram
-                      </a> -->
                     </div>
                   </section>
 
