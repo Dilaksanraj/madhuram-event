@@ -44,7 +44,7 @@ nav {
 	font-family: 'Montserrat', sans-serif;
 	padding: 0 5%;
 	height: 100px;
-	background-color: #9b7f66d9;
+	background-color: #9b7f66a6;
 }
 nav .logo {
 	// float: left;
@@ -251,7 +251,7 @@ nav .icon-burger .line {
     font-family: emoji;
     font-weight: 300;
     font-size: 18px;
-    line-height: 39px;
+    // line-height: 39px;
   }
   .first-character {
     font-weight: 400;
@@ -312,20 +312,18 @@ nav .icon-burger .line {
 
   /* Section - Parallax */
   #parallax-world-of-ugg .parallax-one {
-    height: 743px;
     padding-top: 200px;
     padding-bottom: 200px;
     overflow: hidden;
     position: relative;
     width: 100%;
-   background-image: url(../../../../assets/images/wall/empty-marry.JPG);
-    background-attachment: fixed;
+    opacity: 0.5;
+    background-image: url(../../../../assets/images/wall/DC.JPG);
     background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
-    opacity: 0.8;
+    background-position: center;
+    height: 100vh; /* Set the height to 100% of the viewport height */
+    width: 100%;
+
   }
   #parallax-world-of-ugg .parallax-two {
     padding-top: 200px;
@@ -333,7 +331,6 @@ nav .icon-burger .line {
     overflow: hidden;
     position: relative;
     width: 100%;
-
     background-image: url(../../../../assets/images/wall/light-kiss.JPG);
     background-attachment: fixed;
     background-size: cover;
@@ -349,7 +346,7 @@ nav .icon-burger .line {
     overflow: hidden;
     position: relative;
     width: 100%;
-    background-image: url(../../../../assets/images/wall/welcome-board.webp);
+    background-image: url(../../../../assets/images/wall/happiclient.JPG);
     background-attachment: fixed;
     background-size: cover;
     -moz-background-size: cover;
@@ -462,3 +459,6 @@ nav .icon-burger .line {
  .app-color-text{
     color: #659764!important;
  }
+
+
+

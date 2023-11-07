@@ -10,6 +10,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { FuseCardModule } from '@fuse/components/card';
 import { SharedModule } from 'app/shared/shared.module';
 import { NavBarHomeComponent } from './nav-bar-home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const profileRoutes: Route[] = [
     {
@@ -33,7 +34,8 @@ const profileRoutes: Route[] = [
         MatMenuModule,
         MatTooltipModule,
         FuseCardModule,
-        SharedModule
+        SharedModule,
+        BrowserAnimationsModule
     ]
 })
 export class ProfileModule

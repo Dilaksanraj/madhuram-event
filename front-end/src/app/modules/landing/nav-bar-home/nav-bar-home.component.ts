@@ -1,3 +1,4 @@
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { DOCUMENT } from '@angular/common';
 import {
     ChangeDetectionStrategy,
@@ -15,6 +16,14 @@ import { Router } from '@angular/router';
     styleUrls: ['./nav-bar-home.component.scss'],
     encapsulation: ViewEncapsulation.None,
     changeDetection: ChangeDetectionStrategy.OnPush,
+    animations: [
+        trigger('fadeInUp', [
+          state('void', style({ opacity: 0, transform: 'translateY(20px)' })),
+          transition(':enter', [
+            animate('1s ease', style({ opacity: 1, transform: 'translateY(0)' }))
+          ])
+        ])
+      ]
 })
 export class NavBarHomeComponent implements OnInit {
     header_variable = true;

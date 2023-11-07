@@ -1,11 +1,11 @@
 <div (scroll)="onScroll($event)" class="flex flex-col flex-auto min-w-0">
 
     <!-- Header -->
-    <nav class="header_change" id="subTitle">
+    <nav class="header_change shadow-2xl" id="subTitle">
         <input id="nav-toggle" type="checkbox">
 
         <div class="logo">
-            <h2 class="">
+            <h2 (click)="goTo('')" class="md:text-5xl text-xl cursor-pointer">
                 Madhuram Event
             </h2>
         </div>
@@ -16,23 +16,25 @@
         </label>
 
         <ul class="links">
-            <li (click)="goTo('')">Home</li>
+            <!-- <li (click)="goTo('')">Home</li> -->
             <li (click)="goTo('about')">About</li>
             <li (click)="goTo('work')">Work</li>
+            <span class="flex float-right">
+                <li (click)="goTo('work')">
+                    <mat-icon class="icon-size-5 text-white" [svgIcon]="'feather:facebook'"></mat-icon>
+                </li>
+                <li (click)="goTo('project')">
+                    <mat-icon class="icon-size-5 text-white" [svgIcon]="'feather:instagram'"></mat-icon>
+                </li>
+                <li (click)="goTo('contact')">
+                    <mat-icon class="icon-size-5 text-white" [svgIcon]="'feather:mail'"></mat-icon>
+                </li>
+            </span>
+
             <li (click)="goTo('project')">Projects</li>
             <li (click)="goTo('contact')">Contact</li>
 
-            <span class="d-flex">
-                <li (click)="goTo('work')">
-                    <mat-icon class="icon-size-5" [svgIcon]="'feather:facebook'"></mat-icon>
-                </li>
-                <li (click)="goTo('project')">
-                    <mat-icon class="icon-size-5" [svgIcon]="'feather:instagram'"></mat-icon>
-                </li>
-                <li (click)="goTo('contact')">
-                    <mat-icon class="icon-size-5" [svgIcon]="'feather:mail'"></mat-icon>
-                </li>
-            </span>
+
 
         </ul>
 
@@ -45,41 +47,70 @@
             <div id="parallax-world-of-ugg">
                 <section>
                     <div class="parallax-one">
-                        <h2>Madhuram Event</h2>
+                        <!-- <h2 [@fadeInUp]>Madhuram Event</h2> -->
                         <div class="text-center">
-                            <button type="button"
-                                class="text-white bg-green-800 hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
+                            <!-- <button type="button"
+                                class="transition duration-700 ease-in-out text-white bg-green-800 hover:bg-green-700 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
                                 Learn
-                            </button>
+                            </button> -->
+
+                            <!-- <form>
+                                <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                                        </svg>
+                                    </div>
+                                    <input type="search" id="default-search" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Mockups, Logos..." required>
+                                    <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+                                </div>
+                            </form> -->
                         </div>
                     </div>
                 </section>
 
                 <section>
-                    <div class="block ">
+                    <div class="p-12">
 
-                        <h4 class="text-heading-center">Welcome to <span class="app-color-text">Madhuram</span> <span>
-                                Events</span></h4>
-                        <p>
-                            Your Premier Event Decoration Service! Make your special moments even
-                            more memorable with our expert event decoration services. Whether it's
-                            a wedding, birthday, or any other occasion, we have the perfect touch
-                            to transform your event into a dream come true. With our attention to
-                            detail, creativity, and dedication, we strive to make every
-                            celebration truly extraordinary. Explore our services and let us help
-                            you create magical memories that will last a lifetime.
-                        </p>
-                        <p class="line-break margin-top-10"></p>
-                        <p class="margin-top-10">
-                            Make your wedding day a reflection of your unique love story with our
-                            exquisite wedding decorations. From stunning floral arrangements to
-                            elegant backdrops, we'll bring your vision to life. Our team of
-                            skilled professionals will work closely with you to create a
-                            personalized ambiance that perfectly captures the essence of your
-                            love. Let us handle the details while you focus on cherishing every
-                            moment of your special day.
-                        </p>
+                        <h4 class="text-heading-center">Welcome to <span class="app-color-text">Madhuram</span>
+                            <span>
+                                Events
+                            </span>
+                        </h4>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-12">
+                            <div class="shadow-2xl md:p-12 p-4 shadow-green-500/50 transition duration-700 ease-in-out">
+                                <p [@fadeInUp] class="text-justify text-black-600 md:text-lg text-sm leading-5">
+                                    Your Premier Event Decoration Service! Make your special moments even
+                                    more memorable with our expert event decoration services. Whether it's
+                                    a wedding, birthday, or any other occasion, we have the perfect touch
+                                    to transform your event into a dream come true. With our attention to
+                                    detail, creativity, and dedication, we strive to make every
+                                    celebration truly extraordinary. Explore our services and let us help
+                                    you create magical memories that will last a lifetime.
+                                </p>
+                                <p class="line-break margin-top-10"></p>
+                                <p [@fadeInUp] class="margin-top-10 text-justify text-black-600 md:text-lg text-sm leading-5">
+                                    Make your wedding day a reflection of your unique love story with our
+                                    exquisite wedding decorations. From stunning floral arrangements to
+                                    elegant backdrops, we'll bring your vision to life. Our team of
+                                    skilled professionals will work closely with you to create a
+                                    personalized ambiance that perfectly captures the essence of your
+                                    love. Let us handle the details while you focus on cherishing every
+                                    moment of your special day.
+                                </p>
+                            </div>
+                            <div style="display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: auto">
+                                <img class="rounded shadow-2xl inline-block h-100 w-80" src="../../../../assets/images/owner/face4.JPG" alt="">
+                            </div>
+                        </div>
+
                     </div>
+
                 </section>
 
                 <section class="pt-100">
@@ -89,25 +120,34 @@
                 </section>
 
                 <section id="work">
-                    <div class="block ">
-                        <p>
-                            Celebrate another year of life with a birthday bash that leaves
-                            everyone in awe. Our talented team knows how to turn any space into a
-                            captivating and joyous environment. Whether it's a milestone birthday
-                            or a themed celebration, we'll design an unforgettable experience
-                            tailored to your preferences. From vibrant balloon displays to
-                            delightful centerpieces, our birthday decorations will create memories
-                            that will be cherished for years to come.
-                        </p>
-                        <p class="line-break margin-top-10"></p>
-                        <p class="margin-top-10">
-                            At Madhuram Event, we believe that every event is a canvas waiting to be adorned with beauty
-                            and style.
-                            We are your trusted partners in transforming ordinary gatherings into extraordinary
-                            experiences.
-                            With a passion for artistry and a keen eye for detail, we specialize in creating
-                            enchanting and memorable event decorations that reflect your unique vision.
-                        </p>
+                    <div class="p-12 ">
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="...">
+
+                            </div>
+                            <div class="shadow-2xl md:p-12 p-4">
+                                <p [@fadeInUp] class="text-justify text-black-600 md:text-lg text-sm" style="transform: scale(1.1);">
+                                    Celebrate another year of life with a birthday bash that leaves
+                                    everyone in awe. Our talented team knows how to turn any space into a
+                                    captivating and joyous environment. Whether it's a milestone birthday
+                                    or a themed celebration, we'll design an unforgettable experience
+                                    tailored to your preferences. From vibrant balloon displays to
+                                    delightful centerpieces, our birthday decorations will create memories
+                                    that will be cherished for years to come.
+                                </p>
+                                <p class="line-break margin-top-10"></p>
+                                <p [@fadeInUp] class="margin-top-10 text-justify text-black-600 md:text-lg text-sm">
+                                    At Madhuram Event, we believe that every event is a canvas waiting to be adorned
+                                    with beauty
+                                    and style.
+                                    We are your trusted partners in transforming ordinary gatherings into extraordinary
+                                    experiences.
+                                    With a passion for artistry and a keen eye for detail, we specialize in creating
+                                    enchanting and memorable event decorations that reflect your unique vision.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
@@ -118,27 +158,37 @@
                 </section>
 
                 <section id="project">
-                    <div class="block ">
-                        <p>
-                            <!-- <span class="first-character atw">W</span> -->
-                            From baby showers to anniversary parties, our event decorations will
-                            add a touch of magic to your social gatherings. We understand the
-                            importance of these milestones in your life, and our dedicated team
-                            will ensure every detail is flawlessly executed. With our expertise in
-                            creating thematic decor and beautiful floral arrangements, we'll
-                            create an ambiance that captures the essence of your celebration and
-                            makes it truly unforgettable.
-                        </p>
-                        <p class="line-break margin-top-10"></p>
-                        <p class="margin-top-10">
-                            Take a glimpse into our world of creativity and imagination through
-                            our gallery. Browse through our collection of past events and be
-                            inspired by the stunning decorations we've crafted. See how we've
-                            transformed venues into enchanting spaces filled with beauty and
-                            elegance. Our gallery showcases the diverse range of events we've
-                            worked on, giving you a taste of what we can create for your special
-                            day.
-                        </p>
+                    <div class="p-12 ">
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="shadow-2xl md:p-12 p-4">
+                                <p class="text-justify md:text-lg text-sm">
+                                    <!-- <span class="first-character atw">W</span> -->
+                                    From baby showers to anniversary parties, our event decorations will
+                                    add a touch of magic to your social gatherings. We understand the
+                                    importance of these milestones in your life, and our dedicated team
+                                    will ensure every detail is flawlessly executed. With our expertise in
+                                    creating thematic decor and beautiful floral arrangements, we'll
+                                    create an ambiance that captures the essence of your celebration and
+                                    makes it truly unforgettable.
+                                </p>
+                                <p class="line-break margin-top-10"></p>
+                                <p class="margin-top-10 text-justify text-black-600 md:text-lg text-sm">
+                                    Take a glimpse into our world of creativity and imagination through
+                                    our gallery. Browse through our collection of past events and be
+                                    inspired by the stunning decorations we've crafted. See how we've
+                                    transformed venues into enchanting spaces filled with beauty and
+                                    elegance. Our gallery showcases the diverse range of events we've
+                                    worked on, giving you a taste of what we can create for your special
+                                    day.
+                                </p>
+                            </div>
+                            <div class="...">
+
+                            </div>
+                        </div>
+
+
                     </div>
                 </section>
 
@@ -149,8 +199,8 @@
                 </section>
 
                 <section id="contact">
-                    <div class="block ">
-                        <p class="margin-top-10">
+                    <div class="md:p-12 p-4">
+                        <p class="margin-top-10 text-justify text-black-600 md:text-lg text-sm">
                             Take a glimpse into our world of creativity and imagination through
                             our gallery. Browse through our collection of past events and be
                             inspired by the stunning decorations we've crafted. See how we've
@@ -169,8 +219,8 @@
                 </section>
 
                 <section>
-                    <div class="block">
-                        <p class="margin-top-10">
+                    <div class="md:p-12 p-4">
+                        <p class="margin-top-10 text-justify text-black-600 md:text-lg text-sm">
                             Take a glimpse into our world of creativity and imagination through
                             our gallery. Browse through our collection of past events and be
                             inspired by the stunning decorations we've crafted. See how we've

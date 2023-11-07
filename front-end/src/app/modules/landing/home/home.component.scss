@@ -1060,10 +1060,10 @@ $jumbotron-bg:                      $gray-200 !default;
 // $print-page-size:                   a3 !default;
 // $print-body-min-width:              map-get($grid-breakpoints, "lg") !default;
 
-p {
-	color: darken(#ccc, 10%);
-	font-weight: 300;
-}
+// p {
+// 	color: darken(#ccc, 10%);
+// 	font-weight: 300;
+// }
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
 	// font-family: $font-family-sans-serif;
