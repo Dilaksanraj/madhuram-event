@@ -35,8 +35,8 @@ export class NavBarHomeComponent implements OnInit {
     @HostListener('window:scroll', [])
     onWindowScroll() {
         if (
-            document.body.scrollTop > 100 ||
-            document.documentElement.scrollTop > 100
+            document.body.scrollTop > 1000 ||
+            document.documentElement.scrollTop > 1000
         ) {
             console.log('scrolled');
 
