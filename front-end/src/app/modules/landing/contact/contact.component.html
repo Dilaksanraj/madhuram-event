@@ -40,7 +40,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-y-6 lg:gap-y-0 md:gap-x-6">
                     <!-- Card 1 -->
                     <ng-container *ngIf="yearlyBilling">
-                        <div class="flex-col sm:py-12 sm:px-10 overflow-visible shadow-2xl" >
+                        <div class="flex-col sm:py-12 sm:px-10 overflow-visible shadow-2xl">
                             <img src="..//..//../../assets/images/wall/welcome-board.webp" alt="">
                         </div>
                         <!-- Card 2 -->
@@ -61,10 +61,10 @@
                                     <mat-label>Full name</mat-label>
                                     <input id="email" matInput [formControlName]="'fname'">
                                     <mat-error *ngIf="signInForm.get('email').hasError('required')">
-                                        Email address is required
+                                        Full name is required
                                     </mat-error>
                                     <mat-error *ngIf="signInForm.get('email').hasError('email')">
-                                        Please enter a valid email address
+                                        Please enter a valid Full name
                                     </mat-error>
                                 </mat-form-field>
 
@@ -72,48 +72,34 @@
                                     <mat-label>Date of Event</mat-label>
                                     <input id="email" matInput [formControlName]="'date'">
                                     <mat-error *ngIf="signInForm.get('email').hasError('required')">
-                                        Email address is required
+                                        Date of Event is required
                                     </mat-error>
                                     <mat-error *ngIf="signInForm.get('email').hasError('email')">
-                                        Please enter a valid email address
+                                        Please enter a valid Date of Event
                                     </mat-error>
                                 </mat-form-field>
-
-                                <mat-form-field [ngClass]="formFieldHelpers" class="flex-auto w-full">
-                                    <mat-label>Choose a date</mat-label>
-                                    <input matInput [matDatepicker]="picker1">
-                                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-                                    <mat-datepicker #picker1></mat-datepicker>
-                                </mat-form-field>
-
 
                                 <mat-form-field class="w-full">
                                     <mat-label>Address</mat-label>
                                     <input id="email" matInput [formControlName]="'email'">
                                     <mat-error *ngIf="signInForm.get('email').hasError('required')">
-                                        Email address is required
+                                        Address is required
                                     </mat-error>
                                     <mat-error *ngIf="signInForm.get('email').hasError('email')">
-                                        Please enter a valid email address
+                                        Please enter a valid Address
                                     </mat-error>
                                 </mat-form-field>
 
                                 <mat-form-field class="w-full">
                                     <mat-label>messages</mat-label>
                                     <input id="email" matInput [formControlName]="'email'">
-                                    <mat-error *ngIf="signInForm.get('email').hasError('required')">
-                                        Email address is required
-                                    </mat-error>
-                                    <mat-error *ngIf="signInForm.get('email').hasError('email')">
-                                        Please enter a valid email address
-                                    </mat-error>
+
                                 </mat-form-field>
 
                                 <button class="fuse-mat-button-large w-full mt-6 app-color text-white" mat-flat-button
-                                    [disabled]="signInForm.disabled" (click)="signIn()">
-                                    <span *ngIf="!signInForm.disabled">
-                                        Send
-                                    </span>
+                                    disabled="true" (click)="signIn()">
+
+                                    Send
                                     <mat-progress-spinner *ngIf="signInForm.disabled" [diameter]="24"
                                         [mode]="'indeterminate'"></mat-progress-spinner>
                                 </button>
@@ -125,16 +111,32 @@
 
                                 <div class="flex items-center mt-8 space-x-4">
                                     <button class="flex-auto" type="button" mat-stroked-button>
-                                        <mat-icon class="icon-size-5" [svgIcon]="'feather:facebook'"></mat-icon>
+                                        <a
+                                            href="https://www.instagram.com/madhuram_event/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">
+                                            <mat-icon class="icon-size-5" [svgIcon]="'feather:facebook'"></mat-icon>
+                                        </a>
+                                    </button>
+
+                                    <button class="flex-auto" type="button" mat-stroked-button>
+                                        <a
+                                            href="https://www.instagram.com/madhuram_event/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">
+                                            <mat-icon class="icon-size-5" [svgIcon]="'feather:instagram'"></mat-icon>
+                                        </a>
+
                                     </button>
                                     <button class="flex-auto" type="button" mat-stroked-button>
-                                        <mat-icon class="icon-size-5" [svgIcon]="'feather:instagram'"></mat-icon>
+                                        <a
+                                            href="https://www.instagram.com/madhuram_event/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">
+                                            <mat-icon class="icon-size-5" [svgIcon]="'feather:mail'"></mat-icon>
+                                        </a>
                                     </button>
                                     <button class="flex-auto" type="button" mat-stroked-button>
-                                        <mat-icon class="icon-size-5" [svgIcon]="'feather:mail'"></mat-icon>
-                                    </button>
-                                    <button class="flex-auto" type="button" mat-stroked-button>
-                                        <mat-icon class="icon-size-5" [svgIcon]="'feather:phone'"></mat-icon>
+                                        <a
+                                            href="https://www.instagram.com/madhuram_event/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">
+                                            <mat-icon class="icon-size-5" [svgIcon]="'feather:phone'"></mat-icon>
+
+                                        </a>
+
                                     </button>
                                 </div>
                             </form>
@@ -151,67 +153,16 @@
                         <div class="mt-2 text-lg font-medium tracking-tight text-secondary">Perfect for growing teams
                             wanting to be in more control</div>
                         <div class="w-8 h-1 my-10 rounded bg-accent"></div>
-                        <!-- Price -->
-                        <div class="flex items-baseline whitespace-nowrap">
-                            <div class="mr-2 text-2xl">USD</div>
-                            <div class="text-6xl font-semibold leading-tight tracking-tight">
-                                <ng-container *ngIf="yearlyBilling">$12.00</ng-container>
-                                <ng-container *ngIf="!yearlyBilling">$15.00</ng-container>
-                            </div>
-                        </div>
-                        <!-- Price details -->
-                        <div class="flex flex-col mt-2 text-secondary">
-                            <ng-container *ngIf="yearlyBilling">
-                                <div>billed yearly</div>
-                                <div><b>$15.00</b> billed monthly</div>
-                            </ng-container>
-                            <ng-container *ngIf="!yearlyBilling">
-                                <div>billed monthly</div>
-                                <div><b>$12.00</b> billed yearly</div>
-                            </ng-container>
-                        </div>
-                        <!-- CTA -->
-                        <button class="fuse-mat-button-large mt-10" mat-flat-button [color]="'primary'">
-                            Start a free 14-day trial
-                        </button>
-                        <!-- Features -->
-                        <div class="flex flex-col mt-12">
-                            <div class="font-semibold">Personal features, plus:</div>
-                            <div class="mt-4 space-y-2">
-                                <div class="flex">
-                                    <mat-icon class="icon-size-5 text-green-600"
-                                        [svgIcon]="'heroicons_solid:check'"></mat-icon>
-                                    <div class="ml-2 leading-5"><b>Unlimited</b> projects</div>
-                                </div>
-                                <div class="flex">
-                                    <mat-icon class="icon-size-5 text-green-600"
-                                        [svgIcon]="'heroicons_solid:check'"></mat-icon>
-                                    <div class="ml-2 leading-5"><b>Unlimited</b> storage</div>
-                                </div>
-                                <div class="flex">
-                                    <mat-icon class="icon-size-5 text-green-600"
-                                        [svgIcon]="'heroicons_solid:check'"></mat-icon>
-                                    <div class="ml-2 leading-5">Custom domains</div>
-                                </div>
-                                <div class="flex">
-                                    <mat-icon class="icon-size-5 text-green-600"
-                                        [svgIcon]="'heroicons_solid:check'"></mat-icon>
-                                    <div class="ml-2 leading-5">Bulk editing</div>
-                                </div>
-                                <div class="flex">
-                                    <mat-icon class="icon-size-5 text-green-600"
-                                        [svgIcon]="'heroicons_solid:check'"></mat-icon>
-                                    <div class="ml-2 leading-5">12 / 5 support</div>
-                                </div>
-                            </div>
-                        </div>
+                        <h1>
+                            Coming soon
+                        </h1>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-<!-- gallery -->
+    <!-- gallery -->
     <!-- <div class="flex items-center justify-center py-4 md:py-8 flex-wrap">
         <button type="button"
             class="text-blue-700 hover:text-white border border-blue-600 bg-white hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-base font-medium px-5 py-2.5 text-center mr-3 mb-3 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:bg-gray-900 dark:focus:ring-blue-800">All
@@ -277,64 +228,14 @@
     </div> -->
 
 
-    <!-- test -->
-    <div class="slider">
-        <div class="slide-track">
-            <div class="slide">
-                some
-                <!-- <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" /> -->
-            </div>
-            <div class="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
-            </div>
-            <div class="slide">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
-            </div>
-        </div>
-    </div>
-
-
     <footer class="bg-white dark:bg-gray-900 ">
         <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
             <div class="md:flex md:justify-between">
                 <div class="mb-6 md:mb-0">
                     <a href="" class="flex items-center">
                         <img src="../../../../assets/images/logo/logo2.jpg" class="h-8 mr-3" alt="FlowBite Logo" />
-                        <span
-                            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Madhuram event</span>
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Madhuram
+                            event</span>
                     </a>
                 </div>
                 <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
@@ -342,10 +243,10 @@
                         <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
                             <li class="mb-4">
-                                <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
+                                <a href="#" class="hover:underline">Flowbite</a>
                             </li>
                             <li>
-                                <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                                <a href="#" class="hover:underline">Tailwind CSS</a>
                             </li>
                         </ul>
                     </div>
@@ -353,10 +254,10 @@
                         <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
                         <ul class="text-gray-500 dark:text-gray-400 font-medium">
                             <li class="mb-4">
-                                <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
+                                <a href="#" class="hover:underline ">Github</a>
                             </li>
                             <li>
-                                <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+                                <a href="#" class="hover:underline">Discord</a>
                             </li>
                         </ul>
                     </div>
@@ -375,8 +276,8 @@
             </div>
             <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
             <div class="sm:flex sm:items-center sm:justify-between">
-                <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a
-                        href="/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
+                <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="/"
+                        class="hover:underline">Flowbite™</a>. All Rights Reserved.
                 </span>
                 <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
                     <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">

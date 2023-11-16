@@ -18,10 +18,38 @@ export class ContactComponent implements OnInit {
     signInForm: FormGroup;
     showAlert: boolean = false;
 
+    gallary = [
+        {
+            name:'',
+            src:''
+
+        },
+        {
+            name:'',
+            src:''
+
+        },
+        {
+            name:'',
+            src:''
+
+        },
+        {
+            name:'',
+            src:''
+
+        },
+        {
+            name:'',
+            src:''
+
+        }
+    ]
+
 
     constructor(
         private _authService: AuthService,
-        private _formBuilder: FormBuilder
+        private _formBuilder: FormBuilder,
     ) {}
 
     ngOnInit(): void {
