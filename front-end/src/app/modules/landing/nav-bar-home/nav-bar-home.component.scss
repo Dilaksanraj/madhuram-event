@@ -45,6 +45,8 @@ nav {
 	padding: 0 5%;
 	height: 100px;
 	background-color:#659764ad;
+    box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 }
 nav .logo {
 	// float: left;
