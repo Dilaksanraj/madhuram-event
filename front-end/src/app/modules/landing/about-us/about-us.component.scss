@@ -35,19 +35,6 @@ nav {
 	height: 100px;
 	background-color: rgba(22,22,22,0.55);
 }
-
-.scrolled-sm{
-    position: fixed;
-	z-index: 10;
-	left: 0;
-	right: 0;
-	top: 0;
-	font-family: 'Montserrat', sans-serif;
-	padding: 0 5%;
-	height: 100px;
-    box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
-	// background-color: rgba(22,22,22,0.55);
-}
 .scrolled{
     position: fixed;
 	z-index: 10;
@@ -57,7 +44,7 @@ nav {
 	font-family: 'Montserrat', sans-serif;
 	padding: 0 5%;
 	height: 100px;
-	background-color:#073812;
+	background-color:#073812ad;
     box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 }
@@ -465,10 +452,6 @@ nav .icon-burger .line {
 
  .app-color-text{
     color: #073812!important;
- }
-
- .bg-app{
-    background-color: #073812;
  }
 
 

@@ -34,9 +34,21 @@ export class NavBarHomeComponent implements OnInit {
 
     @HostListener('window:scroll', [])
     onWindowScroll() {
+
+        if(document.body.scrollTop > 10 ||
+            document.documentElement.scrollTop > 10){
+
+                document.getElementById('subTitle').classList.add('scrolled-sm');
+                this.document.getElementById('subTitle').classList.remove('header_change')
+        }
+
+        else{
+            document.getElementById('subTitle').classList.add('header_change');
+            this.document.getElementById('subTitle').classList.remove('scrolled-sm')
+        }
         if (
-            document.body.scrollTop > 1000 ||
-            document.documentElement.scrollTop > 1000
+            document.body.scrollTop > 800 ||
+            document.documentElement.scrollTop > 800
         ) {
             console.log('scrolled');
 

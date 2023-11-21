@@ -12,15 +12,19 @@ import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { FuseCardModule } from '@fuse/components/card';
-import { AboutComponent } from '../about/about.component';
 import { ContactComponent } from '../contact/contact.component';
+import { TeamComponent } from '../team/team.component';
+import { AboutUsComponent } from '../about-us/about-us.component';
+import { ProjectsComponent } from '../projects/projects.component';
 
 @NgModule({
     declarations: [
         LandingHomeComponent,
         NavBarHomeComponent,
-        AboutComponent,
-        ContactComponent
+        AboutUsComponent,
+        ContactComponent,
+        TeamComponent,
+        ProjectsComponent
 
     ],
     imports     : [
