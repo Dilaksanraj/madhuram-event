@@ -16,6 +16,9 @@ import { ContactComponent } from '../contact/contact.component';
 import { TeamComponent } from '../team/team.component';
 import { AboutUsComponent } from '../about-us/about-us.component';
 import { ProjectsComponent } from '../projects/projects.component';
+import { FooterComponent } from '../footer/footer.component';
+import { GalleryComponent } from '../gallery/gallery.component';
+import { SketchComponent } from '../sketch/sketch.component';
 
 @NgModule({
     declarations: [
@@ -24,7 +27,10 @@ import { ProjectsComponent } from '../projects/projects.component';
         AboutUsComponent,
         ContactComponent,
         TeamComponent,
-        ProjectsComponent
+        ProjectsComponent,
+        FooterComponent,
+        GalleryComponent,
+        SketchComponent
 
     ],
     imports     : [

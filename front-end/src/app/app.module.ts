@@ -12,10 +12,6 @@ import { mockApiServices } from 'app/mock-api';
 import { LayoutModule } from 'app/layout/layout.module';
 import { AppComponent } from 'app/app.component';
 import { appRoutes } from 'app/app.routing';
-import { ContactComponent } from './modules/landing/contact/contact.component';
-import { TeamComponent } from './modules/landing/team/team.component';
-import { AboutUsComponent } from './modules/landing/about-us/about-us.component';
-import { ProjectsComponent } from './modules/landing/projects/projects.component';
 
 const routerConfig: ExtraOptions = {
     preloadingStrategy       : PreloadAllModules,
