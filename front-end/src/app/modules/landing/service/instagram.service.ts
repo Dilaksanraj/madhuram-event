@@ -6,8 +6,13 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class InstagramService {
-  private accessToken = `IGQWRQQWU5WVJ5eUEwa2hWT0tNRDFZAbmpsV0lpVmRzQVJ5QjNMcjM1dXlDX25iYm80QkxhTDE4cWZAzWmoyZAHhZASWpSZAnZA1dkdESzNhR2N3bm5zSDZAjOFo0YlQtVC1vWmFNRVpvMWxXRkR2ZADFaaG1VWGVaSEdhN28ZD`//'IGQWRPd0pMVElTR0lIbVpFQmNoeXIzSGxWQ0otYkJwdHJnb0lFSWdQbHdsaFYybnNpcXpGbjZACNzhTTTFKZA3VYaTdQOGZAEeGE5M28tWHZAVYklWdFdCbVk5bENCYlhTbGk5U2tVQm1RTDN2RFR4a0JLRVBoTXNBTXMZD'; // Replace with your actual access token
-  private apiUrl = `https://graph.instagram.com/me/media?fields=id,media_type,media_url,thumbnail_url,caption&access_token=${this.accessToken}`;
+  private accessToken = `IGQWROSEdkOGdQNXV6NXprd0k2dE9EUWxDUlgyclhldUFFMXZAVbVVwWHhPREFQRkhhaGJRUm9OTndJdWhDTkwwWi1VUHJ6Y19GRV93VS1VcUJJcU9VMHhmSkxRcTZAEMmVXVEthN3NGOFZACdVo2YkV5MlV3VVdzaUUZD`
+  private app_id = '1487706665418963'
+  private app_secret = 'e28fd50b701e5fe150ea3dc1f5cc67ef'
+  private apiUrl = `https://graph.instagram.com/me/media?fields=id,media_type,media_url,thumbnail_url,caption&
+  client_id=${this.app_id}&
+  client_secret=${this.app_secret}&
+  access_token=${this.accessToken}`//`https://graph.instagram.com/me/media?fields=id,media_type,media_url,thumbnail_url,caption&access_token=${this.accessToken}`;
 
   constructor(private http: HttpClient) {}
 
