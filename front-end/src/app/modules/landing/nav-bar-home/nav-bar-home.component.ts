@@ -9,6 +9,7 @@ import {
     ViewEncapsulation,
 } from '@angular/core';
 import { Router } from '@angular/router';
+import { AppsConst } from 'app/app.const';
 
 @Component({
     selector: 'app-nav-bar-home',
@@ -32,6 +33,8 @@ export class NavBarHomeComponent implements OnInit {
         @Inject(DOCUMENT) private document: Document
     ) {}
 
+    facebookLink = AppsConst.social_media.facebookLink;
+    instaLink = AppsConst.social_media.insta;
     @HostListener('window:scroll', [])
     onWindowScroll() {
 
