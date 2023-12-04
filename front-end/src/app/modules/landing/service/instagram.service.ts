@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class InstagramService {
 
-  private accessToken = `IGQWRNNEc1WmZAUb096ZA2JJZAVhhU2tfSlZAmVUZAVeTZALRDZAHTFY0RGhzNkk2VWRMZAmt4MXF6LUh0bW5paVh0REQ0S0V0a05yU0J2MmlHX01zVmkxQ29XVWVLeE1mUEMyMVZAYZAm1RU1NiQnVFa0dZAR3lFN1d2ZAWxCb0kZD`
+  private accessToken = `IGQWROc01raGpDUkNFM29NRXNlOENTZA2k2ZAEp1cVlZAUkhpNU02UUVGbVhSMU9XN1E1THl3WWFxVVNZAYVhleEZAhMDhKUjFQYml3U1ZAlQkg4SEMxRFpLSUhjc3FTQTg1ZAWJTd2d1N0VXNWhyVmYwVmVKcy1GZAEhocjQZD`
   private app_id = '1487706665418963'
   private app_secret = 'e28fd50b701e5fe150ea3dc1f5cc67ef'
   private apiUrl = `https://graph.instagram.com/me/media?fields=id,media_type,media_url,thumbnail_url,caption&
