@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class InstagramService {
 
-  private accessToken = `IGQWRPczFoU01jUXBlN18wYThiQVY1dGV5NWhCMlhVcUdrRldIckRRT1c5c2N0TVU0V2JmdGRVWVJRTTVMQ1hoeXVnSklJalhGVlFfRUNyRzJDRlpCV2RuaG1rdlBLTllnVFo2VTVpVWxsdDFQLTRoZAkpqVzVpdXcZD`
+  private accessToken = `IGQWRNaldKMHh6MEVxdHZA0MlRUVTQ1Nmp2WElSOTJsZAk9sOU1fZA1NINlVuNkdzM3ltWW5laUotNTJsVWhDM2NIVi1mYnlNSlZAuaF9Ia1lRTHlxUUt1dDNpXy14N0hCWkNWMzFyX05DcmI1MUMtbWFpSXZAwNjlDaVEZD`
   private app_id = '1487706665418963'
   private app_secret = 'e28fd50b701e5fe150ea3dc1f5cc67ef';
 
