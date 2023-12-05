@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { InstagramService } from '../service/instagram.service';
+import { AppsConst } from 'app/app.const';
 
 @Component({
   selector: 'app-gallery',
@@ -8,8 +9,13 @@ import { InstagramService } from '../service/instagram.service';
 })
 export class GalleryComponent implements OnInit {
 
+    instaLink = AppsConst.social_media.insta;
     feedData: any;
+    photos:any;
+    reels:any
     nextPage: string = '';
+    hasNext: boolean;
+    tab:string = "PHOTO"
 
 
     gallery = [
@@ -66,9 +72,23 @@ export class GalleryComponent implements OnInit {
     this.instagramService.getInstagramFeed().subscribe(
         (data: any) => {
             console.log(data)
-          this.feedData = data.data.filter(e=>e.media_type !='VIDEO'); // Adjust this according to the response structure
+          this.feedData = data.data;
+          this.photos = this.feedData.filter(e=>e.media_type !='VIDEO')
+          this.reels = this.feedData.filter(e=>e.media_type =='VIDEO')
+           // Adjust this according to the response structure
           console.log(this.feedData)
           this.nextPage = data.paging.next;
+          this.hasNext = data.paging.next? true : false
+
+        },
+        error => {
+          console.error('Error fetching Instagram feed:', error);
+        }
+      );
+
+      this.instagramService.getInstagramProfileInfo().subscribe(
+        (data: any) => {
+            console.log(data)
 
         },
         error => {
@@ -83,8 +103,11 @@ export class GalleryComponent implements OnInit {
       this.instagramService.getMoreInstagramData(this.nextPage).subscribe(
         (data: any) => {
             // this.feedData = data.data.filter(e=>e.media_type !='VIDEO');
-          this.feedData = this.feedData.concat(data.data.filter(e=>e.media_type !='VIDEO')); // Append new data to existing feedData
+          this.feedData = this.feedData.concat(data.data); // Append new data to existing feedData
+          this.photos = this.feedData.filter(e=>e.media_type !='VIDEO')
+          this.reels = this.feedData.filter(e=>e.media_type =='VIDEO')
           this.nextPage = data.paging.next; // Update the next page URL
+          this.hasNext = data.paging.next? true : false;
         },
         error => {
           console.error('Error fetching more Instagram data:', error);
@@ -92,5 +115,8 @@ export class GalleryComponent implements OnInit {
       );
     }
   }
-
+  onTabChanged(tabName:string):void{
+    console.log(tabName)
+    this.tab = tabName;
+  }
 }

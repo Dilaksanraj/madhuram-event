@@ -7,25 +7,24 @@ import { Observable } from 'rxjs';
 })
 export class InstagramService {
 
-  private accessToken = `IGQWROc01raGpDUkNFM29NRXNlOENTZA2k2ZAEp1cVlZAUkhpNU02UUVGbVhSMU9XN1E1THl3WWFxVVNZAYVhleEZAhMDhKUjFQYml3U1ZAlQkg4SEMxRFpLSUhjc3FTQTg1ZAWJTd2d1N0VXNWhyVmYwVmVKcy1GZAEhocjQZD`
+  private accessToken = `IGQWRPaUc4M2xPMTBEdFYwdDFUTnl3Mm5rY0JZAMGFHaDM0OXZASWWFuMzFRNWNoTTgyYW1zaTBuZADdPb0IwWjZAZAZAkFIVVJQZAThRQVAzaUVKQlJjYVdjNmtYS3dkbEZAaVVhWOEU5QnVqMzFtdk42MjV2aFhXWFhxb1EZD`
   private app_id = '1487706665418963'
-  private app_secret = 'e28fd50b701e5fe150ea3dc1f5cc67ef'
-  private apiUrl = `https://graph.instagram.com/me/media?fields=id,media_type,media_url,thumbnail_url,caption&
+  private app_secret = 'e28fd50b701e5fe150ea3dc1f5cc67ef';
+
+  private apiUrl = `https://graph.instagram.com/me/media?fields=id,media_type,media_url,thumbnail_url,media_count,media,profile_picture_url,caption&
   client_id=${this.app_id}&
   client_secret=${this.app_secret}&
-  access_token=${this.accessToken}`//`https://graph.instagram.com/me/media?fields=id,media_type,media_url,thumbnail_url,caption&access_token=${this.accessToken}`;
+  access_token=${this.accessToken}`;
 
-
-  private accessTokenUrl = `https://graph.facebook.com/{graph-api-version}/oauth/access_token?
-  grant_type=fb_exchange_token&
-  client_id=${this.app_id}&
-  client_secret=${this.app_secret}&
-  fb_exchange_token=${this.accessToken}`
+  private apiUrlMe = `https://graph.instagram.com/me?fields=id,profile_picture_url,followers_count&access_token=${this.accessToken}`
 
   constructor(private http: HttpClient) {}
 
   getInstagramFeed(): Observable<any> {
     return this.http.get<any>(this.apiUrl);
+  }
+  getInstagramProfileInfo(): Observable<any> {
+    return this.http.get<any>(this.apiUrlMe);
   }
 
   getMoreInstagramData(nextPage: string): Observable<any> {

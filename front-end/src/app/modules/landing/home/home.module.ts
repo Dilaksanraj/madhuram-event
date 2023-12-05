@@ -19,6 +19,7 @@ import { ProjectsComponent } from '../projects/projects.component';
 import { FooterComponent } from '../footer/footer.component';
 import { GalleryComponent } from '../gallery/gallery.component';
 import { SketchComponent } from '../sketch/sketch.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
     declarations: [

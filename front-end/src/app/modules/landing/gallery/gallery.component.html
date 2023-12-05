@@ -1,55 +1,242 @@
-<!--
-<div class="container mx-auto p-4">
-    <div class="grid grid-cols-4">
-        <div *ngFor="let post of feedData">
-          <img data-aos="fade-up" data-aos-duration="1000"
-            class="h-auto max-w-full rounded-lg"
-            [src]="post.media_url"
-            alt=""
-          />
+<main class="bg-gray-100 bg-opacity-25">
+
+    <div class="lg:w-8/12 lg:mx-auto mb-8">
+
+        <header class="flex flex-wrap items-center p-4 md:py-8">
+
+            <div class="md:w-3/12 md:ml-16">
+                <!-- profile image -->
+                <img class="w-20 h-20 md:w-40 md:h-40 object-cover rounded-full
+                       border-2 border-pink-600 p-1" src="../../../../assets/images/logo/insta.jpg" alt="profile">
+            </div>
+
+            <!-- profile meta -->
+            <div class="w-8/12 md:w-7/12 ml-4">
+                <div class="md:flex md:flex-wrap md:items-center mb-4">
+                    <h2 class="text-3xl inline-block font-light md:mr-2 mb-2 sm:mb-0">
+                        madhuram_event
+                    </h2>
+
+                    <!-- badge -->
+                    <span class="inline-block fas fa-certificate fa-lg text-blue-500
+                                 relative mr-6  text-xl transform -translate-y-2" aria-hidden="true">
+                        <i class="fas fa-check text-white text-xs absolute inset-x-0
+                                 ml-1 mt-px"></i>
+                    </span>
+
+                    <!-- follow button -->
+                    <a href='{{instaLink}}' target="_blank" class="bg-blue-500 px-2 py-1
+                          text-white font-semibold text-sm rounded block text-center
+                          sm:inline-block block">Follow</a>
+                </div>
+
+                <!-- post, following, followers list for medium screens -->
+                <ul class="hidden md:flex space-x-8 mb-4">
+                    <li>
+                        <span class="font-semibold">6</span>
+                        posts
+                    </li>
+
+                    <li>
+                        <span class="font-semibold">50.5k</span>
+                        followers
+                    </li>
+                    <li>
+                        <span class="font-semibold">10</span>
+                        following
+                    </li>
+                </ul>
+
+                <!-- user meta form medium screens -->
+                <div class="hidden md:block">
+                    <h1 class="font-semibold">Madhuram Event</h1>
+                    <span class="bioclass">𝓨𝓸𝓾 𝓓𝓻𝓮𝓪𝓶 𝓘𝓽 𝓦𝓮 𝓒𝓪𝓻𝓮 𝓘𝓽</span>
+                    <p>33769737995</p>
+                    <span><strong>www.Madhuram Event.com</strong></span>
+                </div>
+
+            </div>
+
+            <!-- user meta form small screens -->
+            <div class="md:hidden text-sm my-2">
+                <h1 class="font-semibold">Madhuram Event</h1>
+                <span class="bioclass">𝓨𝓸𝓾 𝓓𝓻𝓮𝓪𝓶 𝓘𝓽 𝓦𝓮 𝓒𝓪𝓻𝓮 𝓘𝓽</span>
+                <p>33769737995</p>
+                <span><strong>www.madhuram.fr</strong></span>
+            </div>
+
+        </header>
+
+        <!-- posts -->
+        <div class="px-px md:px-3">
+
+            <!-- user following for mobile only -->
+            <ul class="flex md:hidden justify-around space-x-8 border-t
+                  text-center p-2 text-gray-600 leading-snug text-sm">
+                <li>
+                    <span class="font-semibold text-gray-800 block">6</span>
+                    posts
+                </li>
+
+                <li>
+                    <span class="font-semibold text-gray-800 block">50.5k</span>
+                    followers
+                </li>
+                <li>
+                    <span class="font-semibold text-gray-800 block">10</span>
+                    following
+                </li>
+            </ul>
+            <br>
+            <br>
+            <!-- insta freatures -->
+            <ul class="flex items-center justify-around md:justify-center space-x-12
+                      uppercase tracking-widest font-semibold text-xs text-gray-600
+                      border-t">
+                <!-- posts tab is active -->
+                <li class="md:border-t md:border-gray-700 md:-mt-px md:text-gray-700 cursor-pointer"
+                    (click)="onTabChanged('PHOTO')">
+
+                    <!-- <i class="fas fa-th-large text-xl md:text-xs"></i> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16"
+                        viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                        <path
+                            d="M149.1 64.8L138.7 96H64C28.7 96 0 124.7 0 160V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H373.3L362.9 64.8C356.4 45.2 338.1 32 317.4 32H194.6c-20.7 0-39 13.2-45.5 32.8zM256 192a96 96 0 1 1 0 192 96 96 0 1 1 0-192z" />
+                    </svg>
+                    <span class="hidden md:inline">photos</span>
+
+                </li>
+                <li (click)="onTabChanged('VIDEO')" class="cursor-pointer">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" height="16" width="18"
+                        viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                        <path
+                            d="M0 128C0 92.7 28.7 64 64 64H320c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128zM559.1 99.8c10.4 5.6 16.9 16.4 16.9 28.2V384c0 11.8-6.5 22.6-16.9 28.2s-23 5-32.9-1.6l-96-64L416 337.1V320 192 174.9l14.2-9.5 96-64c9.8-6.5 22.4-7.2 32.9-1.6z" />
+                    </svg>
+                    <span class="hidden md:inline">Videos</span>
+
+                </li>
+                <!-- <li (click)="onTabChanged('ALL')" class="cursor-pointer">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" height="16" width="18"
+                        viewBox="0 0 576 512">
+                        <path
+                            d="M160 32c-35.3 0-64 28.7-64 64V320c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H160zM396 138.7l96 144c4.9 7.4 5.4 16.8 1.2 24.6S480.9 320 472 320H328 280 200c-9.2 0-17.6-5.3-21.6-13.6s-2.9-18.2 2.9-25.4l64-80c4.6-5.7 11.4-9 18.7-9s14.2 3.3 18.7 9l17.3 21.6 56-84C360.5 132 368 128 376 128s15.5 4 20 10.7zM192 128a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zM48 120c0-13.3-10.7-24-24-24S0 106.7 0 120V344c0 75.1 60.9 136 136 136H456c13.3 0 24-10.7 24-24s-10.7-24-24-24H136c-48.6 0-88-39.4-88-88V120z" />
+                    </svg>
+
+                    <span class="hidden md:inline">All</span>
+                </li> -->
+            </ul>
+            <!-- photo -->
+            <div *ngIf="tab==='PHOTO'" class="flex flex-wrap -mx-px md:-mx-3">
+
+                <!-- column -->
+                <div class="w-1/3 p-px md:px-3 img-main" *ngFor="let post of photos">
+                    <!-- post 1-->
+                        <article class="post bg-gray-100 text-white relative pb-full md:mb-6">
+                            <!-- post images-->
+                            <img *ngIf="post.media_type !='VIDEO'"
+                                class="w-full h-full absolute left-0 top-0 object-cover" [src]="post.media_url"
+                                alt="image">
+                            <i class="fas fa-square absolute right-0 top-0 m-1"></i>
+                            <!-- overlay-->
+                            <div class="overlay bg-gray-800 bg-opacity-25 w-full h-full absolute
+                                  left-0 top-0 hidden">
+                                <div class="flex justify-center items-center
+                                      space-x-4 h-full">
+                                    <span class="p-2">
+                                        <i class="fas fa-heart"></i>
+                                        412K
+                                    </span>
+
+                                    <span class="p-2">
+                                        <i class="fas fa-comment"></i>
+                                        2,909
+                                    </span>
+                                </div>
+                            </div>
+
+                        </article>
+                </div>
+
+            </div>
+
+            <div *ngIf="tab==='VIDEO'" class="flex flex-wrap -mx-px md:-mx-3">
+
+                <!-- column -->
+                <div class="w-1/3 p-px md:px-3 img-main" *ngFor="let post of reels">
+                    <!-- post 1-->
+                        <article class="post bg-gray-100 text-white relative md:mb-6">
+                            <!-- post images-->
+                            <video *ngIf="post.media_type =='VIDEO'" [poster]="post.thumbnail_url" controls muted>
+                                <source [src]="post.media_url" type="video/mp4">
+                            </video>
+                            <i class="fas fa-square absolute right-0 top-0 m-1"></i>
+                            <!-- overlay-->
+                            <div class="overlay bg-gray-800 bg-opacity-25 w-full h-full absolute
+                                    left-0 top-0 hidden">
+                                <div class="flex justify-center items-center
+                                        space-x-4 h-full">
+                                    <span class="p-2">
+                                        <i class="fas fa-heart"></i>
+                                        412K
+                                    </span>
+
+                                    <span class="p-2">
+                                        <i class="fas fa-comment"></i>
+                                        2,909
+                                    </span>
+                                </div>
+                            </div>
+
+                        </article>
+                </div>
+
+            </div>
+
+            <!-- All -->
+
+            <div *ngIf="tab==='ALL'" class="flex flex-wrap -mx-px md:-mx-3">
+
+                <!-- column -->
+                <div class="w-1/3 p-px md:px-3 img-main" *ngFor="let post of feedData">
+                    <!-- post 1-->
+                        <article class="post bg-gray-100 text-white relative md:mb-6">
+                            <!-- post images-->
+                            <img *ngIf="post.media_type !='VIDEO'"
+                                class="w-full h-full absolute left-0 top-0 object-cover" [src]="post.media_url"
+                                alt="image">
+                            <video *ngIf="post.media_type =='VIDEO'" [poster]="post.thumbnail_url" controls muted>
+                                <source [src]="post.media_url" type="video/mp4">
+                            </video>
+                            <i class="fas fa-square absolute right-0 top-0 m-1"></i>
+                            <!-- overlay-->
+                            <div class="overlay bg-gray-800 bg-opacity-25 w-full h-full absolute
+                                    left-0 top-0 hidden">
+                                <div class="flex justify-center items-center
+                                        space-x-4 h-full">
+                                    <span class="p-2">
+                                        <i class="fas fa-heart"></i>
+                                        412K
+                                    </span>
+
+                                    <span class="p-2">
+                                        <i class="fas fa-comment"></i>
+                                        2,909
+                                    </span>
+                                </div>
+                            </div>
+
+                        </article>
+                </div>
+
+            </div>
         </div>
     </div>
-  </div> -->
 
-
-
-<!-- <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-    <div *ngFor="let post of feedData">
-        <ng-container *ngIf="post.media_type !='VIDEO'">
-            <img  class="h-auto max-w-full rounded-lg" [src]="post.media_url" alt="">
-        </ng-container>
-        <ng-container *ngIf="post.media_type =='VIDEO'">
-        <video style="height: 395px; width: 395px;" class="rounded-lg" >
-            <source  [src]="post.media_url" type="video/mp4">
-        </video>
-
-        </ng-container>
+    <div class="text-center">
+        <button *ngIf="hasNext" (click)="loadMore()" type="button"
+            class="focus:outline-none text-white bg-green-900 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Load
+            More</button>
     </div>
-</div> -->
-
-
-
-<!-- <div class="flex items-center justify-center py-4 md:py-8 flex-wrap">
-    <button type="button" class="text-blue-700 hover:text-white border border-blue-600 bg-white hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:bg-gray-900 dark:focus:ring-blue-800">All categories</button>
-    <button type="button" class="text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800">Shoes</button>
-    <button type="button" class="text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800">Bags</button>
-    <button type="button" class="text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800">Electronics</button>
-    <button type="button" class="text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800">Gaming</button>
-</div> -->
-<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-    <div *ngFor="let post of feedData">
-        <ng-container *ngIf="post.media_type !='VIDEO'">
-            <img style="" class="max-w-full rounded-lg" [src]="post.media_url" alt="" alt="">
-        </ng-container>
-
-        <!-- <img  *ngIf="post.media_type =='VIDEO'" class="max-w-full rounded-lg" [src]="post.thumbnail_url" alt="" alt=""> -->
-        <!-- <video *ngIf="post.media_type =='VIDEO'" style="height: 395px; width: 395px;" class="rounded-lg" >
-            <source  [src]="post.media_url" type="video/mp4">
-        </video> -->
-    </div>
-</div>
-
-<button (click)="loadMore()" type="button" class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Load More</button>
-
-
-
+</main>

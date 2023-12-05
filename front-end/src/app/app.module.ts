@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ExtraOptions, PreloadAllModules, RouterModule } from '@angular/router';
 import { MarkdownModule } from 'ngx-markdown';
 import { FuseModule } from '@fuse';
@@ -26,6 +26,7 @@ const routerConfig: ExtraOptions = {
     imports     : [
         BrowserModule,
         BrowserAnimationsModule,
+        NoopAnimationsModule,
 
         RouterModule.forRoot(appRoutes, routerConfig),
 

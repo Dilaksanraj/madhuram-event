@@ -53,8 +53,6 @@ export class NavBarHomeComponent implements OnInit {
             document.body.scrollTop > 800 ||
             document.documentElement.scrollTop > 800
         ) {
-            console.log('scrolled');
-
             document.getElementById('subTitle').classList.add('scrolled');
             this.document.getElementById('subTitle').classList.remove('header_change')
         }
