@@ -1,13 +1,18 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from 'environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class InstagramService {
 
+<<<<<<< HEAD
   private accessToken = `IGQWRNaldKMHh6MEVxdHZA0MlRUVTQ1Nmp2WElSOTJsZAk9sOU1fZA1NINlVuNkdzM3ltWW5laUotNTJsVWhDM2NIVi1mYnlNSlZAuaF9Ia1lRTHlxUUt1dDNpXy14N0hCWkNWMzFyX05DcmI1MUMtbWFpSXZAwNjlDaVEZD`
+=======
+  private accessToken = environment.accessToken
+>>>>>>> main
   private app_id = '1487706665418963'
   private app_secret = 'e28fd50b701e5fe150ea3dc1f5cc67ef';
 
