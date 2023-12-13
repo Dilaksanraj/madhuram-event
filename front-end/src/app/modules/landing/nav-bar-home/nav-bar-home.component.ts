@@ -50,8 +50,8 @@ export class NavBarHomeComponent implements OnInit {
             this.document.getElementById('subTitle').classList.remove('scrolled-sm')
         }
         if (
-            document.body.scrollTop > 800 ||
-            document.documentElement.scrollTop > 800
+            document.body.scrollTop > 15 ||
+            document.documentElement.scrollTop > 15
         ) {
             document.getElementById('subTitle').classList.add('scrolled');
             this.document.getElementById('subTitle').classList.remove('header_change')

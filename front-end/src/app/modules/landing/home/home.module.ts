@@ -20,6 +20,7 @@ import { FooterComponent } from '../footer/footer.component';
 import { GalleryComponent } from '../gallery/gallery.component';
 import { SketchComponent } from '../sketch/sketch.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeMainComponent } from '../home-main/home-main.component';
 
 @NgModule({
     declarations: [
@@ -31,7 +32,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         ProjectsComponent,
         FooterComponent,
         GalleryComponent,
-        SketchComponent
+        SketchComponent,
+        HomeMainComponent
 
     ],
     imports     : [

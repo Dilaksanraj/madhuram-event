@@ -86,7 +86,7 @@ export class GalleryComponent implements OnInit {
         }
       );
 
-      this.instagramService.getInstagramProfileInfo().subscribe(
+      this.instagramService.getLongCode().subscribe(
         (data: any) => {
             console.log(data)
 

@@ -314,20 +314,7 @@ app-about-us{
       }
 
       /* Section - Parallax */
-      #parallax-world-of-ugg .parallax-one {
-        padding-top: 200px;
-        padding-bottom: 200px;
-        overflow: hidden;
-        position: relative;
-        width: 100%;
-        opacity: 0.7;
-        background-image: url(../../../../assets/images/wall/DC.JPG);
-        background-size: cover;
-        background-position: center;
-        height: 100vh; /* Set the height to 100% of the viewport height */
-        width: 100%;
 
-      }
       #parallax-world-of-ugg .parallax-two {
         padding-top: 200px;
         padding-bottom: 200px;
@@ -410,7 +397,6 @@ app-about-us{
         #parallax-world-of-ugg .block {
           padding: 30px;
         }
-        #parallax-world-of-ugg .parallax-one,
         #parallax-world-of-ugg .parallax-two,
         #parallax-world-of-ugg .parallax-three {
           /* padding-top: 100px; */
