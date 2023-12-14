@@ -8,7 +8,7 @@ app-about-us{
     }
     .container {
         position: relative;
-        margin-top: 100px;
+        // margin-top: 100px;
     }
     .container img {
         display: block;
@@ -295,7 +295,7 @@ app-about-us{
       #parallax-world-of-ugg .block {
         background: #fff;
         padding: 60px;
-        width: 820px;
+        // width: 820px;
         margin: 0 auto;
         text-align: justify;
       }
@@ -442,6 +442,12 @@ app-about-us{
      }
 
 
+.rotate-6deg{
+    rotate: 6deg;
+}
 
+.rotate--6deg{
+    rotate: -6deg;
+}
 
 }
