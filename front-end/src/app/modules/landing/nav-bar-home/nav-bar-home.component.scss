@@ -139,6 +139,10 @@ nav .icon-burger {
 	transform: translateY(-50%);
 }
 
+.logo img{
+    display: none;
+}
+
 
 .cover-video{
     position: absolute;
@@ -202,6 +206,16 @@ nav .icon-burger {
 	nav .icon-burger {
 		display: block;
 	}
+    .logo img{
+        display: block;
+    }
+    .logo img{
+        width: 60px;
+    }
+    .logo h2{
+        display: none;
+    }
+
 	nav :checked ~ .icon-burger .line:nth-child(1) {
 		transform: translateY(10px) rotate(225deg);
 	}

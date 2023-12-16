@@ -41,23 +41,10 @@ export class HomeMainComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.testTransform()
-
   }
 
   onScroll(event: any) {
     console.log(event);
 }
-
-  testTransform(){
-    this.textArray.forEach(function(element, index) {
-
-        setTimeout(()=>{
-            document.getElementById('element').innerHTML = element  //.set(Text, {text:this.textArray[index]})
-        },1000)
-        index++
-      });
-
-  }
 
 }
