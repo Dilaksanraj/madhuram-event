@@ -293,7 +293,7 @@ app-about-us{
       /* Section - Block */
       /**************************/
       #parallax-world-of-ugg .block {
-        background: #fff;
+        // background: #fff;
         padding: 60px;
         // width: 820px;
         margin: 0 auto;
@@ -421,7 +421,7 @@ app-about-us{
        /* padding-top: 100px; */
       }
       .block{
-       background-color: #0005;
+    //    background-color: #0005;
       }
 
       .link-insta{
@@ -448,6 +448,14 @@ app-about-us{
 
 .rotate--6deg{
     rotate: -6deg;
+}
+
+.bg-uniqe{
+    background-color: #86403f;
+}
+.img-shoot{
+    width: 450px;
+    height: 650px;
 }
 
 }

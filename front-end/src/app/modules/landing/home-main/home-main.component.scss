@@ -10,7 +10,7 @@ app-home-main{
         background-image: url(../../../../assets/images/wall/DC.JPG);
         background-size: cover;
         background-position: center;
-        // height: 100vh; /* Set the height to 100% of the viewport height */
+        height: 100vh; /* Set the height to 100% of the viewport height */
         width: 100%;
 
       }
@@ -34,7 +34,7 @@ background-color: #003a0d;
         background-image: url(../../../../assets/images/wall/DC.JPG);
         background-size: cover;
         background-position: center;
-        // height: 100vh;
+        height: 100vh;
       }
 
       @media screen and (max-width: 767px) {
