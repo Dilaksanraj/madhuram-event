@@ -1,5 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, HostListener, Inject, OnInit, ViewEncapsulation } from '@angular/core';
+import { SlideInterface } from '../image-slider/interface/slide.interface';
 
 @Component({
   selector: 'app-home-main',
@@ -44,6 +45,14 @@ heading = 'We do';
             // this.document.getElementById('btn-home').classList.remove('bg-app')
         }
     }
+
+    slides: SlideInterface[] = [
+        { url: '../../../../assets/images/about-us/ramyahindi.jpg', title: 'beach' },
+        { url: '../../../../assets/images/about-us/ramya-white.jpg', title: 'boat' },
+        { url: '../../../../assets/images/about-us/ramya-anu.jpg', title: 'forest' },
+        { url: '../../../../assets/images/about-us/safari.jpeg', title: 'city' },
+        { url: '../../../../assets/images/about-us/ramya-mathu.jpg', title: 'city' },
+      ];
 
   ngOnInit(): void {
 

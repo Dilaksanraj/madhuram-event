@@ -22,6 +22,7 @@ import { SketchComponent } from '../sketch/sketch.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeMainComponent } from '../home-main/home-main.component';
 import { ReviewComponent } from '../review/review.component';
+import { ImageSliderModule } from '../image-slider/imageSlider.module';
 
 @NgModule({
     declarations: [
@@ -51,7 +52,8 @@ import { ReviewComponent } from '../review/review.component';
         MatTooltipModule,
         FuseCardModule,
 
-        SharedModule
+        SharedModule,
+        ImageSliderModule
     ]
 })
 export class LandingHomeModule
