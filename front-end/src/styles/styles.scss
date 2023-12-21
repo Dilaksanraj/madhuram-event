@@ -2,3 +2,11 @@
 /*  @ Import/write your custom styles here.
 /*  @ Styles from this file will override 'vendors.scss' and Fuse's base styles.
 /* ----------------------------------------------------------------------------------------------------- */
+
+
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+@font-face {
+    font-family: 'Cormorant';
+    src: url('../assets/fonts/inter/Cormorant-VariableFont_wght.ttf');
+  }

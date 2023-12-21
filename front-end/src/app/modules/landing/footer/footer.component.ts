@@ -13,11 +13,16 @@ instaLink = AppsConst.social_media.insta;
 linkedIn = AppsConst.social_media.linkedIn;
 facebookLink = AppsConst.social_media.facebookLink;
 
+
 constructor() { }
 
   ngOnInit(): void {
 
+
+
     console.log(this.currentYear);
   }
+
+
 
 }

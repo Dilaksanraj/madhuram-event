@@ -139,6 +139,10 @@ nav .icon-burger {
 	transform: translateY(-50%);
 }
 
+.logo img{
+    display: none;
+}
+
 
 .cover-video{
     position: absolute;
@@ -202,6 +206,16 @@ nav .icon-burger {
 	nav .icon-burger {
 		display: block;
 	}
+    .logo img{
+        display: block;
+    }
+    .logo img{
+        width: 60px;
+    }
+    .logo h2{
+        display: none;
+    }
+
 	nav :checked ~ .icon-burger .line:nth-child(1) {
 		transform: translateY(10px) rotate(225deg);
 	}
@@ -325,7 +339,7 @@ nav .icon-burger {
   /* Section - Block */
   /**************************/
   #parallax-world-of-ugg .block {
-    background: #fff;
+    // background: #fff;
     padding: 60px;
     // width: 820px;
     margin: 0 auto;
@@ -372,19 +386,6 @@ nav .icon-burger {
     background-repeat: no-repeat;
     background-position: center center;
     opacity: 0.5;
-  }
-  #parallax-world-of-ugg .parallax-three {
-    padding-top: 200px;
-    padding-bottom: 200px;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    background-image: url(../../../../assets/images/wall/happiclient.JPG);
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    opacity: 0.6;
   }
 
   #parallax-world-of-ugg .parallax-four {
@@ -467,7 +468,7 @@ nav .icon-burger {
    /* padding-top: 100px; */
   }
   .block{
-   background-color: #0005;
+//    background-color: #0005;
   }
 
   .link-insta{

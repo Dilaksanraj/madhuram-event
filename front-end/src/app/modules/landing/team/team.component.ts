@@ -12,4 +12,9 @@ export class TeamComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  gotoSocial(url){
+
+    window.open(url,'_blank')
+  }
 }

@@ -21,6 +21,8 @@ import { GalleryComponent } from '../gallery/gallery.component';
 import { SketchComponent } from '../sketch/sketch.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeMainComponent } from '../home-main/home-main.component';
+import { ReviewComponent } from '../review/review.component';
+import { ImageSliderModule } from '../image-slider/imageSlider.module';
 
 @NgModule({
     declarations: [
@@ -33,7 +35,8 @@ import { HomeMainComponent } from '../home-main/home-main.component';
         FooterComponent,
         GalleryComponent,
         SketchComponent,
-        HomeMainComponent
+        HomeMainComponent,
+        ReviewComponent
 
     ],
     imports     : [
@@ -49,7 +52,8 @@ import { HomeMainComponent } from '../home-main/home-main.component';
         MatTooltipModule,
         FuseCardModule,
 
-        SharedModule
+        SharedModule,
+        ImageSliderModule
     ]
 })
 export class LandingHomeModule

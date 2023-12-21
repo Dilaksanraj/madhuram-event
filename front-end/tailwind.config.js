@@ -71,7 +71,7 @@ const config = {
     important   : true,
     purge       : {
         enabled: process.env.TAILWIND_MODE === 'build',
-        content: ['./src/**/*.{html,scss,ts}'],
+        content: ['./src/**/*.{html,scss,ts}',"./node_modules/tw-elements/dist/js/**/*.js"],
         options: {
             safelist: {
                 standard: ['dark'],
@@ -448,7 +448,8 @@ const config = {
         // Other third party and/or custom plugins
         require('@tailwindcss/typography')({modifiers: ['sm', 'lg']}),
         require('@tailwindcss/aspect-ratio'),
-        require('@tailwindcss/line-clamp')
+        require('@tailwindcss/line-clamp'),
+        [require("tw-elements/dist/plugin.cjs")]
     ]
 };
 
