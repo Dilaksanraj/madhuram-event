@@ -30,8 +30,8 @@ heading = 'We do';
                 // document.getElementById('mainImg').classList.add('bg-color');
                 // this.document.getElementById('mainImg').classList.remove('bg-luminosity');
 
-                document.getElementById('btn-home').classList.add('bg-app');
-                this.document.getElementById('mainImg').classList.remove('bg-black');
+                // document.getElementById('btn-home').classList.add('bg-app');
+                // this.document.getElementById('mainImg').classList.remove('bg-black');
 
 
         }
@@ -40,8 +40,8 @@ heading = 'We do';
             // document.getElementById('mainImg').classList.add('bg-luminosity');
             // this.document.getElementById('mainImg').classList.remove('bg-color')
 
-            document.getElementById('btn-home').classList.add('bg-black');
-            this.document.getElementById('btn-home').classList.remove('bg-app')
+            // document.getElementById('btn-home').classList.add('bg-black');
+            // this.document.getElementById('btn-home').classList.remove('bg-app')
         }
     }
 

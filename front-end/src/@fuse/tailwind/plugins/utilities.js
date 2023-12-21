@@ -40,7 +40,7 @@ const utilities = plugin(({
             },
             '.bg-default'     : {
                 '--tw-bg-opacity': '1 !important',
-                backgroundColor  : 'rgba(var(--fuse-bg-default-rgb), var(--tw-bg-opacity)) !important'
+                backgroundColor  : 'white !important'
             },
             '.bg-dialog'      : {
                 '--tw-bg-opacity': '1 !important',

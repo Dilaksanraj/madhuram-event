@@ -1,40 +1,66 @@
-<div class="grid grid-cols-1 md:grid-cols-1 md:mr-24 md:mb-24 md:ml-24 mt-24 mr-6 ml-6">
+<div class="bg-gray-100">
+    <div class=" bg-#fdf6f6 grid grid-cols-1 md:grid-cols-1 md:mr-24 md:ml-24 mt-24 mr-6 ml-6">
 
-    <div class="about-us about-founder text-center">
-        About the Founder
-    </div>
-    <div class="items-center flex flex-wrap">
-        <div class="w-full md:w-4/12 m-auto px-4" data-aos="fade-up">
-            <img loading="lazy" alt="..." class="max-w-full rounded-full shadow-lg"
-                src="../../../../assets/images/contact-us/contact1.JPG" />
-            <div class="text-center">
-                <p class="contact-info">
-                    contact info
-                </p>
-                <p>
-                    <mat-icon>email</mat-icon>
-                    madhuramevent@gmail.com
-                </p>
-                <p>
-                    <mat-icon> phone</mat-icon>
-                    0769737995
-                </p>
+        <div class="about-us about-founder text-center" data-aos="fade-up" data-aos-duration="2000">
+            Contact Us
+        </div>
+        <div class="items-center flex flex-wrap">
+            <div class="w-full md:w-4/12 m-auto px-4" data-aos="fade-left" data-aos-duration="2000">
+                <img loading="lazy" alt="..." class="max-w-full rounded-full shadow-lg contact-img m-auto"
+                    src="../../../../assets/images/contact-us/contact1.JPG" />
+                <div class="text-center">
+                    <p class="contact-info">
+                        Paviththira
+                    </p>
+                    <p class="contact-sub-info custom-color hover:text-green-700">
+                        <i class="fas fa-envelope "></i>
+                        madhuramevent@gmail.com
+                    </p>
+                    <p class="contact-sub-info custom-color hover:text-green-700">
+                        <i class="fas fa-phone"></i>
+                        {{phone_pavi}}
+                    </p>
+                </div>
+            </div>
+            <div class="w-full md:w-4/12 m-auto px-4" data-aos="fade-right" data-aos-duration="2000">
+                <img loading="lazy" alt="..." class="max-w-full rounded-full shadow-lg contact-img m-auto"
+                    src="../../../../assets/images/contact-us/contact-d.JPG" />
+
+                <div class="text-center">
+                    <p class="contact-info">
+                        Dilaksanraj
+                    </p>
+                    <p class="contact-sub-info custom-color hover:text-green-700">
+                        <i class="fas fa-envelope"></i>
+                        madhuramevent@gmail.com
+                    </p>
+                    <p class="contact-sub-info custom-color hover:text-green-700">
+                        <i class="fas fa-phone"></i>
+                        {{phone_dilaksan}}
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="w-full md:w-4/12 m-auto px-4" data-aos="fade-up">
-            <img loading="lazy" alt="..." class="max-w-full rounded-full shadow-lg"
-                src="../../../../assets/images/contact-us/contact2.JPG" />
 
-            <div class="text-center">
-                <p class="contact-info">
-                    contact info
+        <div class="about-us about-founder text-center mb-24" data-aos="fade-up" data-aos-duration="2000">
+            <div class="mt-24  text-center flex justify-center md:mr-24 md:ml-24 mr-1 ml-1 bg-green-800 p-2">
+
+                <p class="social-info md:m-2 hover:bg-green-600 md:p-2">
+                    <i class="fas fa-phone"></i>
+                    0769737995
                 </p>
-                <p>
-                    <mat-icon>email</mat-icon>
-                    madhuramevent@gmail.com
+
+                <p class="social-info  md:m-2 hover:bg-green-600 md:p-2">
+                    <i class="fas fa-envelope"></i>
+                    0769737995
                 </p>
-                <p>
-                    <mat-icon> phone</mat-icon>
+
+                <p class="social-info  md:m-2 hover:bg-green-600 md:p-2">
+                    <span class="fab fa-facebook"></span>
+                    0769737995
+                </p>
+                <p class="social-info  md:m-2 hover:bg-green-600 md:p-2 cursor-pointer" (click)="openInsta()">
+                    <span class="fab fa-instagram"></span>
                     0769737995
                 </p>
             </div>
@@ -42,3 +68,36 @@
     </div>
 
 </div>
+
+
+<div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" fill="#f1f5f9">
+        <path class="elementor-shape-fill" d="M0,6V0h1000v100L0,6z"></path>
+    </svg>
+</div>
+
+<div class="text-center h-60 d-flex justify-content-center align-items-center">
+    <div
+        class="pt-4 pb-4 px-12 flex border-solid border-2 border-green-800 text-green-800 hover:bg-green-800 hover:text-white hover:border-green-800">
+        <span class="fab fa-instagram fa-2xl leading-none mr-2 mt-2 "></span>
+        <p class="our-instagram mt-1 cursor-pointer" (click)="openInsta()">
+            Our Instagram
+
+        </p>
+    </div>
+</div>
+
+
+<div class="bg-gray-100">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" fill="#fff">
+        <path class="elementor-shape-fill" d="M0,6V0h1000v100L0,6z"></path>
+    </svg>
+</div>
+
+
+<!-- carrousel -->
+
+
+
