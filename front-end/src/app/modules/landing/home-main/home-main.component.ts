@@ -9,7 +9,13 @@ import { Component, HostListener, Inject, OnInit, ViewEncapsulation } from '@ang
 })
 export class HomeMainComponent implements OnInit {
 
-    textArray = ['wedding', 'birthday', 'reception']
+    textArray = ['wedding', 'birthday', 'reception'];
+
+
+roles: string[] = ['Wedding', 'Birthday', 'Mahendi', 'Baby shower', 'Maternity'];
+currentIndex = 0;
+heading = 'We do';
+
   constructor(
     @Inject(DOCUMENT) private document: Document
   ) { }
@@ -21,8 +27,8 @@ export class HomeMainComponent implements OnInit {
         if(document.body.scrollTop > 10 ||
             document.documentElement.scrollTop > 10){
 
-                document.getElementById('mainImg').classList.add('bg-color');
-                this.document.getElementById('mainImg').classList.remove('bg-luminosity');
+                // document.getElementById('mainImg').classList.add('bg-color');
+                // this.document.getElementById('mainImg').classList.remove('bg-luminosity');
 
                 document.getElementById('btn-home').classList.add('bg-app');
                 this.document.getElementById('mainImg').classList.remove('bg-black');
@@ -31,8 +37,8 @@ export class HomeMainComponent implements OnInit {
         }
 
         else{
-            document.getElementById('mainImg').classList.add('bg-luminosity');
-            this.document.getElementById('mainImg').classList.remove('bg-color')
+            // document.getElementById('mainImg').classList.add('bg-luminosity');
+            // this.document.getElementById('mainImg').classList.remove('bg-color')
 
             document.getElementById('btn-home').classList.add('bg-black');
             this.document.getElementById('btn-home').classList.remove('bg-app')
@@ -41,10 +47,17 @@ export class HomeMainComponent implements OnInit {
 
   ngOnInit(): void {
 
+    setInterval(() => {
+        this.currentIndex = (this.currentIndex + 1) % this.roles.length;
+      }, 2000); // Change the word every 2 seconds (adjust as needed)
   }
 
   onScroll(event: any) {
     console.log(event);
 }
+
+getCurrentRole(): string {
+    return this.roles[this.currentIndex];
+  }
 
 }

@@ -1,6 +1,6 @@
 app-home-main{
 
-    #parallax-world-of-ugg .parallax-one {
+    .img-color {
         padding-top: 200px;
         padding-bottom: 200px;
         overflow: hidden;
@@ -8,8 +8,10 @@ app-home-main{
         width: 100%;
         opacity: 0.7;
         background-image: url(../../../../assets/images/wall/DC.JPG);
-        background-size: cover;
-        background-position: center;
+        background-attachment: fixed;
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-position: center center;
         height: 100vh; /* Set the height to 100% of the viewport height */
         width: 100%;
 
@@ -19,7 +21,7 @@ app-home-main{
         background-blend-mode:luminosity;
       }
       .bg-color{
-        background-blend-mode:exclusion;
+        // background-blend-mode:exclusion;
       }
 
     .b-black{
@@ -34,6 +36,7 @@ background-color: #003a0d;
         background-image: url(../../../../assets/images/wall/DC.JPG);
         background-size: cover;
         background-position: center;
+        background-attachment: fixed;
         height: 100vh;
       }
 
@@ -65,5 +68,44 @@ background-color: #003a0d;
     }
 
 }
+
+.main-center-text{
+    text-align: center;
+    font-size: 50px;
+    text-transform: uppercase;
+    color: #e47186;
+    font-weight: 500;
+    font-family: 'Cormorant';
+}
+
+.heading-text-role{
+    opacity: 1;
+    transform: rotateX(0deg);
+}
+
+.flip-up {
+    transform-style: preserve-3d;
+    animation: flipUpAnimation 0.6s ease-in-out forwards;
+  }
+
+  @keyframes flipUpAnimation {
+    from {
+      transform: rotateX(0);
+      opacity: 0;
+    }
+    to {
+      transform: rotateX(0);
+      opacity: 1;
+    }
+  }
+
+  @font-face {
+    font-family: 'Cormorant';
+    src: url('../../../../assets/fonts/inter/Cormorant-VariableFont_wght.ttf');
+  }
+
+  .mt-300{
+    margin-top: 300px;
+  }
 
 
