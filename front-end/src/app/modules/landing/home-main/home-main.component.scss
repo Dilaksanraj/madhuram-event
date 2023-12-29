@@ -1,18 +1,18 @@
 app-home-main {
     .img-color {
-        padding-top: 200px;
-        padding-bottom: 200px;
-        overflow: hidden;
-        position: relative;
-        width: 100%;
-        opacity: 0.7;
-        background-image: url(../../../../assets/images/wall/DC.JPG);
+        // padding-top: 200px;
+        // padding-bottom: 200px;
+        // overflow: hidden;
+        // position: relative;
+        // width: 100%;
+        // opacity: 0.7;
+        background-image: url(../../../../assets/images/wall/banner2.png);
         background-attachment: fixed;
         background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
+        // background-repeat: no-repeat;
+        background-position: center;
         height: 100vh; /* Set the height to 100% of the viewport height */
-        width: 100%;
+        // width: 100%;
     }
 
     .bg-luminosity {
@@ -31,11 +31,30 @@ app-home-main {
     }
 
     .img-custom {
-        background-image: url(../../../../assets/images/wall/DC.JPG);
+        background-image: url(../../../../assets/images/wall/banner1.png);
+        // background-imsage: url('your-image.jpg');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
-        height: 100vh;
+        min-height: 100vh;
+        margin: 0;
+    }
+    @media (max-width: 1025px) {
+        .bg-mobile{
+            display: block;
+        }
+        .img-custom {
+            display: none;
+        }
+        .img-color{
+            display: none;
+        }
+    }
+    @media (min-width: 1025px) {
+        .bg-mobile{
+            display: none;
+        }
+
     }
 
     @media screen and (max-width: 767px) {
