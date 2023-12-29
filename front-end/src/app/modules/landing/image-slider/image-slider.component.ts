@@ -7,6 +7,7 @@ import { SlideInterface } from './interface/slide.interface';
 })
 export class ImageSliderComponent implements OnInit {
     @Input() slides: SlideInterface[] = [];
+    @Input() isAnimate;
 
     isTransitioning:boolean = false;
     currentIndex: number = 0;
@@ -40,7 +41,7 @@ export class ImageSliderComponent implements OnInit {
     }
 
     goToNext(): void {
-        this.isTransitioning = true;
+         this.isTransitioning = this.isAnimate?true : false;
         const isLastSlide = this.currentIndex === this.slides.length - 1;
         const newIndex = isLastSlide ? 0 : this.currentIndex + 1;
 

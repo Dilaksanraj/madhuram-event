@@ -12,6 +12,12 @@
 	// background-color: rgba(22,22,22,0.55);
 }
 
+@media (max-width: 819px) {
+    .scrolled{
+        height: 60px!important;
+    }
+}
+
 .header_change .nav .links li {
 	font-size: 12px;
     font-family: 'lato',Helvetica,Arial,sans-serif;
@@ -210,7 +216,7 @@ nav .icon-burger {
         display: block;
     }
     .logo img{
-        width: 60px;
+        width: 40px;
     }
     .logo h2{
         display: none;

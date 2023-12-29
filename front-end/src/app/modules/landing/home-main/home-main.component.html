@@ -1,12 +1,14 @@
 <div (scroll)="onScroll($event)" id="app-home-main" class="flex-auto w-full">
 
 
-    <!-- <div style="background-color: #f1f5f9;"  class="mx-6 mb-24 bg-gray-100 h-40 md:h-96">
-        <image-slider [slides]="slides"></image-slider>
-      </div> -->
 
-    <section id="mainImg" class="img-custom bg-center bg-no-repeat bg-gray-700">
+
+    <section id="mainImg" class="img-custom bg-gray-700">
         <div class="px-4 mx-auto max-w-screen-xl text-center py-56 lg:py-56">
+
+            <!-- <div class="mx-6 mb-24 h-96">
+                <image-slider [slides]="slides" [isAnimate] = "false"></image-slider>
+            </div> -->
             <!-- <div class="main-center-text mt-300">
                 <span>{{ heading }} </span>
                 <span class="heading-text-role" data-aos="fade-up"
@@ -14,17 +16,42 @@
                     {{ getCurrentRole() }}
                 </span>
             </div> -->
+            <!-- <main class="container">
+                <p>{{ heading }}</p>
+                <section class="animation">
+                  <div class="first"><div>Carlos Córdova</div></div>
+                  <div class="second"><div>Web Developer</div></div>
+                  <div class="third"><div>Systems Engineer</div></div>
+                </section>
+              </main> -->
+
         </div>
     </section>
-    <section class="img-color bg-blend-luminosity">
+    <section class="img-color">
         <div class="px-4 mx-auto max-w-screen-xl text-center py-56 lg:py-56">
-            <div class="main-center-text">
+            <!-- <div class="main-center-text">
                 <span>
                     <b>...FOR THOSE WHO ARE NOT AFRAID!
                     </b>
                 </span>
-            </div>
+            </div> -->
         </div>
     </section>
+
+    <section id="mainImg" class="bg-mobile bg-gray-700">
+        <div class="mx-auto max-w-screen-xl">
+            <img src="../../../../assets/images/wall/banner-mobile.png" alt="">
+        </div>
+    </section>
+    <!-- <section id="mainImg" class="bg-mobile bg-gray-700">
+        <div class="mx-auto max-w-screen-xl">
+            <img src="../../../../assets/images/wall/banner2.png" alt="">
+        </div>
+    </section> -->
+    <!-- <section class="img-color">
+        <div class="px-4 mx-auto max-w-screen-xl text-center py-56 lg:py-56">
+
+        </div>
+    </section> -->
 
 </div>
