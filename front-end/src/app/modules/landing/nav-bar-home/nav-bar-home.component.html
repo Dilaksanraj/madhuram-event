@@ -4,8 +4,8 @@
     <nav class="header_change drop-shadow-lg" id="subTitle">
         <input id="nav-toggle" type="checkbox">
 
-        <div class="logo sm:pt-4">
-            <img class="cursor-pointer" (click)="goTo('')" width="50px" src="../../../../assets/images/logo/madhuram-logo.png" alt="">
+        <div class="logo pt-4">
+            <img id="appLogo" class="cursor-pointer" (click)="goTo('')" width="50px" src="../../../../assets/images/logo/madhuram-logo.png" alt="">
             <h2 (click)="goTo('')" class="md:text-5xl text-xl cursor-pointer">
                 Madhuram Event
             </h2>
@@ -16,38 +16,35 @@
             <div class="line"></div>
         </label>
 
-        <ul class="links ">
+        <ul class="links text-center m-16 sm:m-0 rounded-md sm:rounded-none">
             <!-- <li (click)="goTo('')">Home</li> -->
-            <li (click)="goTo('about')" data-aos="zoom-out-right" data-aos-duration="500" >About</li>
-            <li (click)="goTo('team')" data-aos="fade-right" data-aos-duration="1000" >Teams</li>
-            <span class="flex float-right justify-center">
-                <li>
-                    <a href='{{facebookLink}}' target="_blank">
-                        <mat-icon class="icon-size-5 text-white" [svgIcon]="'feather:facebook'"></mat-icon>
-                    </a>
+                <li class="" (click)="goTo('about')" data-aos="zoom-out-right" data-aos-duration="500" >About</li>
+                <li (click)="goTo('team')" data-aos="fade-right" data-aos-duration="1000" >Teams</li>
+                <span class="flex float-right justify-center">
+                    <li>
+                        <a href='{{facebookLink}}' target="_blank">
+                            <mat-icon class="icon-size-5 text-white" [svgIcon]="'feather:facebook'"></mat-icon>
+                        </a>
 
-                </li>
-                <li >
-                    <a href='{{instaLink}}' target="_blank">
-                        <mat-icon class="icon-size-5 text-white" [svgIcon]="'feather:instagram'"></mat-icon>
+                    </li>
+                    <li >
+                        <a href='{{instaLink}}' target="_blank">
+                            <mat-icon class="icon-size-5 text-white" [svgIcon]="'feather:instagram'"></mat-icon>
 
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:'madhuramevent@gmail.com' " target="_blank">
-                    <mat-icon  class="icon-size-5 text-white" [svgIcon]="'feather:mail'"></mat-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:'madhuramevent@gmail.com' " target="_blank">
+                        <mat-icon  class="icon-size-5 text-white" [svgIcon]="'feather:mail'"></mat-icon>
 
-                    </a>
-                </li>
-            </span>
-            <li (click)="goTo('milestone')" data-aos="fade-right" data-aos-duration="1500" >Millestone</li>
+                        </a>
+                    </li>
+                </span>
+                <li (click)="goTo('milestone')" data-aos="fade-right" data-aos-duration="1500" >Millestone</li>
 
-            <!-- <li (click)="goTo('work')" data-aos="zoom-out-right" data-aos-duration="500" >Work</li>
-            <li (click)="goTo('gallery')" data-aos="zoom-out-right" data-aos-duration="500" >Gallery</li> -->
-            <li (click)="goTo('contact')" data-aos="zoom-out-right" data-aos-duration="500" >Contact</li>
-
-
-
+                <!-- <li (click)="goTo('work')" data-aos="zoom-out-right" data-aos-duration="500" >Work</li>
+                <li (click)="goTo('gallery')" data-aos="zoom-out-right" data-aos-duration="500" >Gallery</li> -->
+                <li (click)="goTo('contact')" data-aos="zoom-out-right" data-aos-duration="500" >Contact</li>
         </ul>
 
     </nav>
