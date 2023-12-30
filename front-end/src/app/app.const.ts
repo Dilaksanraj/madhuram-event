@@ -2,7 +2,7 @@ export class AppsConst {
 
     static readonly social_media = {
         insta:'https://www.instagram.com/madhuram_event/',
-        linkedIn:'https://www.linkedin.com/in/dilaksanraj-alexsandar/',
+        linkedIn:'https://dilaksanraj.netlify.app/',
         facebookLink:'https://www.facebook.com/profile.php?id=61551917973453',
         madhuram_email:'madhuramevent@gmail.com',
 
