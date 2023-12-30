@@ -15,6 +15,7 @@ export class TeamComponent implements OnInit {
 
   gotoSocial(url){
 
+    url = 'https://www.instagram.com/madhuram_event/'
     window.open(url,'_blank')
   }
 }
