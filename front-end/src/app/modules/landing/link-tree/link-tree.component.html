@@ -57,56 +57,16 @@
                                 <div class="w-full">
                                     <ul role="list" class=" w-full divide-y divide-gray-100 text-center justify-center">
 
-                                        <li class="flex gap-x-6 m-auto pt-4 w-full">
+                                        <li *ngFor="let item of list" class="flex gap-x-6 m-auto pt-4 w-full">
                                             <div
                                                 class="flex min-w-0 gap-x-4 w-full border-2 border-radius rounded-lg border-green-800 pl-2 text-black hover:bg-green-600  hover:text-white ui-list-item hover:text-xl">
                                                 <img class="h-12 w-12 flex-none rounded-full bg-gray-50"
-                                                    src="../../../../assets/icons/flat-icons/instagram.png" alt="">
-                                                <a href="https://www.instagram.com/madhuram_event/" target="_blank"
+                                                    src='{{item.icon}}' alt="">
+                                                <a href='{{item.link}}' target="_blank"
                                                     class="">
                                                     <div class="min-w-0 flex-auto justify-center text-center pt-2">
                                                         <p class="text-sm font-semibold leading-6">
-                                                            Madhuram Event</p>
-                                                    </div>
-                                                </a>
-
-                                                <div class="min-w-0 flex-auto justify-right text-right dot-copy pr-2 cursor-pointer"
-                                                    (click)="copyLinkToClipboard('https://www.instagram.com/madhuram_event/')">
-                                                    ...
-                                                </div>
-                                            </div>
-                                        </li>
-
-                                        <li class="flex gap-x-6 m-auto pt-4 w-full">
-                                            <div
-                                                class="flex min-w-0 gap-x-4 w-full border-2 border-radius rounded-lg border-green-800 pl-2 text-black hover:bg-green-600  hover:text-white ui-list-item hover:text-xl">
-                                                <img class="h-12 w-12 flex-none rounded-full bg-gray-50"
-                                                    src="../../../../assets/icons/flat-icons/facebook.png" alt="">
-                                                <a href="https://www.facebook.com/profile.php?id=61551917973453" target="_blank"
-                                                    class="">
-                                                    <div class="min-w-0 flex-auto justify-center text-center pt-2">
-                                                        <p class="text-sm font-semibold leading-6">
-                                                            Madhuram Event</p>
-                                                    </div>
-                                                </a>
-
-                                                <div class="min-w-0 flex-auto justify-right text-right dot-copy pr-2 cursor-pointer"
-                                                    (click)="copyLinkToClipboard('https://www.instagram.com/madhuram_event/')">
-                                                    ...
-                                                </div>
-                                            </div>
-                                        </li>
-
-                                        <li class="flex gap-x-6 m-auto pt-4 w-full">
-                                            <div
-                                                class="flex min-w-0 gap-x-4 w-full border-2 border-radius rounded-lg border-green-800 pl-2 text-black hover:bg-green-600  hover:text-white ui-list-item hover:text-xl">
-                                                <img class="h-12 w-12 flex-none rounded-full bg-gray-50"
-                                                    src="../../../../assets/icons/flat-icons/call.png" alt="">
-                                                <a href="https://www.instagram.com/madhuram_event/" target="_blank"
-                                                    class="">
-                                                    <div class="min-w-0 flex-auto justify-center text-center pt-2">
-                                                        <p class="text-sm font-semibold leading-6">
-                                                            07 69 73 79 95</p>
+                                                            {{item.name}}</p>
                                                     </div>
                                                 </a>
 
