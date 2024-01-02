@@ -1,0 +1,146 @@
+<div class="grid w-full h-full text-center justify-content-center pt-12" style="background-color: #659765;">
+    <div *ngIf="isNotify" id="toast-undo"
+        class="items-center flex w-full p-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800"
+        role="alert">
+        <div class="text-sm font-normal">
+            copied!
+        </div>
+
+        <!-- <div class="flex items-center ms-auto space-x-2 rtl:space-x-reverse">
+            <a class="text-sm font-medium text-blue-600 p-1.5 hover:bg-blue-100 rounded-lg dark:text-blue-500 dark:hover:bg-gray-700"
+                href="#">Undo</a>
+            <button type="button"
+                class="ms-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex items-center justify-center h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
+                data-dismiss-target="#toast-undo" aria-label="Close">
+                <span class="sr-only">Close</span>
+                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                </svg>
+            </button>
+        </div> -->
+
+    </div>
+    <main class="profile-page mt-60 w-96 md:w-120">
+        <section class="relative py-16">
+
+            <div class="container mx-auto px-4">
+                <div class="relative flex flex-col min-w-0 break-words  w-full mb-6 shadow-xl rounded-lg -mt-64"
+                    style="background-color: #eaecdb80;">
+                    <div class="px-6 mt-8">
+                        <div class="flex flex-wrap justify-center">
+                            <div class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
+                                <div class="relative flex text-center justify-center">
+                                    <img alt="..." src="../../../../assets/images/logo/insta.jpg"
+                                        class="shadow-xl rounded-full h-auto align-middle border-none  max-w-150-px">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <h3 class="text-4xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2"
+                                (click)="copyLinkToClipboard('link')">
+                                Madhuram Event
+                            </h3>
+                            <div class="text-sm leading-normal mt-0 mb-2 text-blueGray-400 font-bold uppercase">
+                                📍 Paris,France
+                            </div>
+                            <div class="mb-2 text-blueGray-600 mt-10">
+                                🎈 Balloon Deco | 💍 Wedding | 🎉 Others
+                            </div>
+                            <div class="mb-2 text-blueGray-600">
+                                😘 You Dream It, We Care It 😘
+                            </div>
+                        </div>
+                        <div class="mt-10 border-t border-blueGray-200 pb-12">
+                            <div class=" w-full">
+                                <div class="w-full">
+                                    <ul role="list" class=" w-full divide-y divide-gray-100 text-center justify-center">
+
+                                        <li class="flex gap-x-6 m-auto pt-4 w-full">
+                                            <div
+                                                class="flex min-w-0 gap-x-4 w-full border-2 border-radius rounded-lg border-green-800 pl-2 text-black hover:bg-green-600  hover:text-white ui-list-item hover:text-xl">
+                                                <img class="h-12 w-12 flex-none rounded-full bg-gray-50"
+                                                    src="../../../../assets/icons/flat-icons/instagram.png" alt="">
+                                                <a href="https://www.instagram.com/madhuram_event/" target="_blank"
+                                                    class="">
+                                                    <div class="min-w-0 flex-auto justify-center text-center pt-2">
+                                                        <p class="text-sm font-semibold leading-6">
+                                                            Madhuram Event</p>
+                                                    </div>
+                                                </a>
+
+                                                <div class="min-w-0 flex-auto justify-right text-right dot-copy pr-2 cursor-pointer"
+                                                    (click)="copyLinkToClipboard('https://www.instagram.com/madhuram_event/')">
+                                                    ...
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="flex gap-x-6 m-auto pt-4 w-full">
+                                            <div
+                                                class="flex min-w-0 gap-x-4 w-full border-2 border-radius rounded-lg border-green-800 pl-2 text-black hover:bg-green-600  hover:text-white ui-list-item hover:text-xl">
+                                                <img class="h-12 w-12 flex-none rounded-full bg-gray-50"
+                                                    src="../../../../assets/icons/flat-icons/facebook.png" alt="">
+                                                <a href="https://www.facebook.com/profile.php?id=61551917973453" target="_blank"
+                                                    class="">
+                                                    <div class="min-w-0 flex-auto justify-center text-center pt-2">
+                                                        <p class="text-sm font-semibold leading-6">
+                                                            Madhuram Event</p>
+                                                    </div>
+                                                </a>
+
+                                                <div class="min-w-0 flex-auto justify-right text-right dot-copy pr-2 cursor-pointer"
+                                                    (click)="copyLinkToClipboard('https://www.instagram.com/madhuram_event/')">
+                                                    ...
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="flex gap-x-6 m-auto pt-4 w-full">
+                                            <div
+                                                class="flex min-w-0 gap-x-4 w-full border-2 border-radius rounded-lg border-green-800 pl-2 text-black hover:bg-green-600  hover:text-white ui-list-item hover:text-xl">
+                                                <img class="h-12 w-12 flex-none rounded-full bg-gray-50"
+                                                    src="../../../../assets/icons/flat-icons/call.png" alt="">
+                                                <a href="https://www.instagram.com/madhuram_event/" target="_blank"
+                                                    class="">
+                                                    <div class="min-w-0 flex-auto justify-center text-center pt-2">
+                                                        <p class="text-sm font-semibold leading-6">
+                                                            07 69 73 79 95</p>
+                                                    </div>
+                                                </a>
+
+                                                <div class="min-w-0 flex-auto justify-right text-right dot-copy pr-2 cursor-pointer"
+                                                    (click)="copyLinkToClipboard('https://www.instagram.com/madhuram_event/')">
+                                                    ...
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <!-- <a href="#pablo" class="font-normal text-pink-500">Show more</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="relative bg-blueGray-200 pt-8 pb-6 mt-8">
+                <div class="container mx-auto px-4">
+                    <div class="flex flex-wrap items-center md:justify-between justify-center">
+                        <div class="w-full md:w-6/12 px-4 mx-auto text-center">
+                            <div class="text-sm text-blueGray-500 font-semibold py-1">
+                                Developed by <a href="https://dilaksanraj.netlify.app/"
+                                    class="text-blueGray-500 hover:text-blueGray-800" target="_blank"> Dilaksanraj</a>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </main>
+</div>
+
+
+
+
+
