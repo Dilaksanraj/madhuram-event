@@ -109,6 +109,23 @@ export const appRoutes: Route[] = [
         ],
     },
 
+    {
+        path: '',
+        component: LayoutComponent,
+        data: {
+            layout: 'empty',
+        },
+        children: [
+            {
+                path: 'link-tree',
+                loadChildren: () =>
+                    import('app/modules/landing/link-tree/link-tree.module').then(
+                        (m) => m.LinkTreeModule
+                    ),
+            },
+        ],
+    },
+
     // Admin routes
     // {
     //     path: '',
