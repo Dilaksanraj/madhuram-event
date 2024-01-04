@@ -28,6 +28,7 @@ import { AppsConst } from 'app/app.const';
 })
 export class NavBarHomeComponent implements OnInit {
     header_variable = true;
+    showList:boolean = false;
     constructor(
         private _router: Router,
         @Inject(DOCUMENT) private document: Document
@@ -62,10 +63,15 @@ export class NavBarHomeComponent implements OnInit {
     ngOnInit(): void {}
 
     goTo(fragment: any): void {
+        this.showList = false
         this._router.navigateByUrl('home#' + fragment);
     }
     @HostListener('document.scroll')
     onScroll(event: any) {
         console.log(event);
+    }
+
+    showListElement(isShowList){
+        this.showList = true
     }
 }
